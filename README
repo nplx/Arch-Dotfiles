@@ -1,0 +1,16 @@
+# README
+#
+# This repository contains dotfiles of my Archlinux configs.
+
+~/ 
+ |--.bashrc
+ |--.Xdefaults
+ |--.vimrc
+ |--.gvimrc
+ |--.emacs
+ |--.conkyrc
+ |--.config/
+           |--openbox/
+                     |--autostart
+                     |--menu.xml
+                     |--rc.xml

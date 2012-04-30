@@ -747,6 +747,15 @@
   <application name="dwb">
     <decor>no</decor>
   </application>
+  <application class="Firefox">
+    <decor>no</decor>
+  </application>
+  <application name="gvim">
+    <decor>no</decor>
+  </application>
+  <application name="emacs">
+    <decor>no</decor>
+  </application>
 
 </applications>
   <!-- <applications>

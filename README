@@ -15,4 +15,5 @@
                      |--autostart
                      |--menu.xml
                      |--rc.xml
-
+           |--tint2/
+                   |--tint2rc

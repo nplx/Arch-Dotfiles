@@ -1,0 +1,63 @@
+###################################
+##    My <.conkyrc> 2012
+##    Based on URIEL1998's code
+###################################
+
+#avoid flickr
+double_buffer yes
+
+#own window
+own_window yes
+own_window_transparent no
+#own_window_type normal
+#own_window_type panel
+own_window_type desktop
+#own_window_type dock
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager
+
+net_avg_samples 3
+cpu_avg_samples 3
+
+#borders
+draw_borders no
+border_width 1
+
+#shades
+draw_shades no
+draw_outline no
+
+#position
+gap_x 0
+gap_y -3
+alignment bl
+
+#behaviour
+update_interval 1
+#update_interval_on_battery
+total_run_times 0
+
+#color
+default_color ffffff
+#default_shade_color 000000
+#own_window_color 000000
+color0 2f5ae8
+color1 f2f2f2
+color2 a3c2e1
+
+#font
+use_xft yes
+xftfont Clean 
+
+#force UTF8
+override_utf8_locale yes
+
+#to prevent window from moving
+use_spacer right
+minimum_size 1024
+
+#listen to MPD
+mpd_host 127.0.0.1
+mpd_port 6600
+
+TEXT
+${color0}[${color}${color2}${kernel}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 100}${color0}[${color}${color green}${mpd_track} - ${mpd_title} - ${mpd_artist} ${mpd_bar 5,50}${color}${color0}]${color}${else}${alignc}${offset 100}${color0}[${color}${color2}${time %A %d %m}${color}${color0}]${color}${endif}${alignr}${offset 7}${color0}[${color}${voffset -1}${color1}${font Conkysymbols:pixelsize=13}c${font}${color}${voffset -3}:${color}${color2}${execi 300 python ~/Files/Scripts/Py/unreadGmailCount.py | grep '^.'}${color}${color0}][${color}${voffset -5}${color1}${font Weather:pixelsize=24}${execi 300 python ~/Files/Scripts/Py/conditionsWeatherScript.py | grep '^.'}${font}${color}${offset 4}${voffset -6.5}${color2}${execi 1800 python ~/Files/Scripts/Py/tempWeatherScript.py | grep '[0-9]$'}${color}${color1}°C${color}${color0}][${color}${color1}${font Conkysymbols:pixelsize=9}d${font}${color}:${color2}${upspeedf eth0}${color}${offset -18}${color1}kb/s${color} ${color1}${font Conkysymbols:pixelsize=9}e${font}:${color}${color2}${downspeedf eth0}${color}${offset -18}${color1}kb/s${color}${color0}]${color}

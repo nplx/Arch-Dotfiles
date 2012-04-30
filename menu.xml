@@ -21,6 +21,14 @@
 </menu>
 
 <menu id="apps-editors-menu" label="Editors">
+  <item label="Emacs">
+    <action name="Execute">
+      <command>emacs</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Sublime Text 2">
     <action name="Execute">
       <command>~/Applications/Sublime\ Text\ 2/./sublime_text</command>
@@ -34,7 +42,6 @@
       <command>gvim</command>
       <startupnotify>
         <enabled>yes</enabled>
-        <wmclass>Gvim</wmclass>
       </startupnotify>
     </action>
   </item>
@@ -83,17 +90,17 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Luakit">
+  <item label="Firefox">
     <action name="Execute">
-      <command>luakit</command>
+      <command>firefox</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
     </action>
   </item>
-  <item label="Uzbl (TP)">
+  <item label="dwb (TP)">
     <action name="Execute">
-      <command>uzbl-browser</command>
+      <command>dwb</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -193,14 +200,14 @@
         <command>xterm</command>
       </action>
     </item>
-    <item label="Eclipse">
+    <item label="Emacs">
       <action name="Execute">
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Eclipse</name>
+          <name>Emacs</name>
           <icon></icon>
         </startupnotify>
-        <command>eclipse</command>
+        <command>emacs</command>
       </action>
     </item>
   <separator label="Applications" />

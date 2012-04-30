@@ -180,6 +180,41 @@
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>stiler-simple</name>
+        </startupnotify>
+        <command>stiler simple</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Right">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>stiler-cycle</name>
+        </startupnotify>
+        <command>stiler cycle</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Up">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>stiler-v</name>
+        </startupnotify>
+        <command>stiler vertical</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Down">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>stiler-h</name>
+        </startupnotify>
+        <command>stiler horizontal</command>
+      </action>    </keybind>
+    <!--keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
@@ -202,7 +237,7 @@
         <to>down</to>
         <wrap>no</wrap>
       </action>
-    </keybind>
+    </keybind-->
     <keybind key="S-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
@@ -341,22 +376,13 @@
         <command>terminator</command>
       </action>
     </keybind>
-    <keybind key="A-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Gvim</name>
-        </startupnotify>
-        <command>gvim</command>
-      </action>
-    </keybind>
     <keybind key="F35">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Uzbl</name>
+          <name>dwb</name>
         </startupnotify>
-        <command>uzbl-browser</command>
+        <command>dwb</command>
       </action>
     </keybind>
   </keyboard>
@@ -716,6 +742,9 @@
     <decor>no</decor>
   </application>
   <application name="chromium">
+    <decor>no</decor>
+  </application>
+  <application name="dwb">
     <decor>no</decor>
   </application>
 

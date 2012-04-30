@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+<menu id="apps-accessories-menu" label="Accessories">
+  <item label="Dropbox">
+    <action name="Execute">
+      <command>dropboxd</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="aMule">
+    <action name="Execute">
+      <command>amule</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-editors-menu" label="Editors">
+  <item label="Sublime Text 2">
+    <action name="Execute">
+      <command>~/Applications/Sublime\ Text\ 2/./sublime_text</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Vim">
+    <action name="Execute">
+      <command>gvim</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Gvim</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Gedit">
+    <action name="Execute">
+      <command>gedit</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Nano">
+    <action name="Execute">
+      <command>urxvt -e nano</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="urxvt (Alt+Fn)">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+  <item label="Xterm">
+    <action name="Execute">
+      <command>xterm</command>
+    </action>
+  </item>
+  <item label="Terminator (Alt+F1)">
+    <action name="Execute">
+      <command>terminator</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Chromium">
+    <action name="Execute">
+      <command>chromium</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Luakit">
+    <action name="Execute">
+      <command>luakit</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Uzbl (TP)">
+    <action name="Execute">
+      <command>uzbl-browser</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-office-menu" label="Office">
+  <item label="OpenOffice Base">
+    <action name="Execute">
+      <command>ooffice -base</command>
+    </action>
+  </item>
+  <item label="OpenOffice Writer">
+    <action name="Execute">
+      <command>ooffice -writer</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-multimedia-menu" label="Multimedia">
+  <item label="Audacious">
+    <action name="Execute">
+      <command>audacious</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Audacious</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Ncmpcpp">
+    <action name="Execute">
+      <command>urxvt -e ncmpcpp</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-fileman-menu" label="File Managers">
+  <item label="Thunar">
+    <action name="Execute">
+      <command>thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Ranger">
+    <action name="Execute">
+      <command>urxvt -e ranger</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-graphics-menu" label="Graphics">
+  <item label="Mirage">
+    <action name="Execute">
+      <command>mirage</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="openbox-menu" label="Configurations">
+  <item label="Appearance Manager">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Openbox Configuration Manager">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Start" />
+    <item label="Terminal">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Terminal</name>
+          <icon></icon>
+        </startupnotify>
+        <command>xterm</command>
+      </action>
+    </item>
+    <item label="Eclipse">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Eclipse</name>
+          <icon></icon>
+        </startupnotify>
+        <command>eclipse</command>
+      </action>
+    </item>
+  <separator label="Applications" />
+  <menu id="apps-accessories-menu"/>
+  <menu id="apps-editors-menu"/>
+  <menu id="apps-graphics-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-office-menu"/>
+  <menu id="apps-multimedia-menu"/>
+  <menu id="apps-term-menu"/>
+  <menu id="apps-fileman-menu"/>
+  <separator label="System" />
+  <menu id="openbox-menu"/>
+  <menu id="system-menu"/>
+  <separator />
+  <menu id="system-menu" label="System">
+    <item label="Log Out">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </item>
+    <separator />
+    <item label="Reboot">
+      <action name="Execute">
+        <prompt>Are you sure you want to reboot?</prompt>
+        <command>sudo shutdown -r now</command>
+      </action>
+    </item>
+    <separator />
+    <item label="Poweroff">
+      <action name="Execute">
+        <prompt>Are you sure you want to shut down Archlinux?</prompt>
+        <command>sudo shutdown -h now</command>
+      </action>
+    </item>
+  </menu>
+
+</menu>
+
+</openbox_menu>

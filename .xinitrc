@@ -12,22 +12,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 if [ -f /$HOME/.Xmodmap ]; then
-  /usr/bin/xmodmap /home/me/.Xmodmap
+  /usr/bin/xmodmap $HOME/.Xmodmap
 fi
 
-#exec ck-launch-session 
-#exec openbox-session &
-
-# ...or the Window Manager of your choice
-
 # Set Transparent
-xcompmgr -n &
+#xcompmgr -n &
 #xcompmgr -nCcfF -I-0.15 -O-.03 -D4 -l-5 -r4.2 -o.75 &
 #transset-df .65 > /dev/null &
  
 ##
 # Set tint2
-exec tint2 &
+#exec tint2 &
 
 # Set conky
 exec conky &
@@ -43,7 +38,6 @@ eval `cat ~/.fehbg` &
 #export LC_ALL="zh_CN.UTF-8"
 
 #exec dwm
-#exec awesome
-exec ck-launch-session openbox-session
-exec ck-launch-session dbus-launch ~/.xstart
-
+#exec openbox-session
+exec ck-launch-session dbus-launch openbox-session
+#exec ck-launch-session dbus-launch $HOME/.xstart

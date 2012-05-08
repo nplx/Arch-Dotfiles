@@ -7,19 +7,19 @@
 rounded = 1
 border_width = 0
 background_color = #000000 55
-border_color = #258aef 100
+border_color = #3d84d4 100
 
 # ID 2
 rounded = 1
 border_width = 0
-background_color = #258aef 80
+background_color = #3d84d4 80
 border_color = #000000 100
 
 # ID 3
 rounded = 1
 border_width = 1
 background_color = #000000 35
-border_color = #258aef 100
+border_color = #3d84d4 100
 
 # ID 9
 #bacground_color = #000000 100
@@ -44,18 +44,16 @@ autohide_height = 2
 strut_policy = follow_size
 
 # Launchers
-launcher_icon_theme = Faenza-Ambiance
+launcher_icon_theme = Faenza
 launcher_padding = 2 2 8
 launcher_background_id = 
 lancher_icon_size = 24
-launcher_item_app = /usr/share/applications/chromium.desktop
+launcher_item_app = /usr/share/applications/firefox.desktop
 launcher_item_app = /usr/share/applications/emacs.desktop
 launcher_item_app = /usr/share/applications/gvim.desktop
 launcher_item_app = /usr/share/applications/gedit.desktop
 launcher_item_app = /usr/share/applications/Thunar.desktop
-launcher_item_app = /usr/share/applications/acroread.desktop
-launcher_item_app = /usr/share/applications/audacious.desktop
-
+launcher_item_app = /usr/share/applications/AdobeReader.desktop
 
 # Taskbar
 taskbar_mode = single_desktop

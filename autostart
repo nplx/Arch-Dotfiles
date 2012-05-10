@@ -14,22 +14,21 @@
 
 # If you want to use XFCE config tools...
 #
-xfce4-power-manager &
+#xfce4-power-manager &
+#nm-applet &
 
-#Use feh to set the Wallpapper
-#eval `cat ~/.fehbg` &
-
-#Run Xcompmgr or compiz
-#xcompmgr -n &
+#Set xcompmgr-dana
+xcompmgr -fF -t-5 -l-5 -r4.2 -o.55 -D2 -m.83 &
 
 #Run transset
 transset-df .70 -n Conky &
 
-#ibus-pinyin support
-#/usr/bin/ibus-daemon &
-
 #Run Panel
-#tint2 &
+tint2 &
 
-#Run Volume Icon
+#Run volume tray icon
 volumeicon &
+
+#Run clipit
+clipit &
+

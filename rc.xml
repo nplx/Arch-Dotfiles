@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Vorta_Openbox</name>
+    <name>Lessr-BlueFade</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -213,7 +213,8 @@
           <name>stiler-h</name>
         </startupnotify>
         <command>stiler horizontal</command>
-      </action>    </keybind>
+      </action>
+    </keybind>
     <!--keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -373,7 +374,7 @@
       <action name="Execute">
         <enable>true</enable>
         <name>Terminator</name>
-        <command>terminator</command>
+        <command>terminator --geometry=1000x700+12+34</command>
       </action>
     </keybind>
     <keybind key="F35">
@@ -734,30 +735,33 @@
   <manageDesktops>yes</manageDesktops>
   <!-- show the manage desktops section in the client-list-(combined-)menu -->
 </menu>
-<applications>
-  <application name="urxvt">
-    <decor>no</decor>
-  </application>
-  <application name="xterm">
-    <decor>no</decor>
-  </application>
-  <application name="chromium">
-    <decor>no</decor>
-  </application>
-  <application name="dwb">
-    <decor>no</decor>
-  </application>
-  <application class="Firefox">
-    <decor>no</decor>
-  </application>
-  <application name="gvim">
-    <decor>no</decor>
-  </application>
-  <application name="emacs">
-    <decor>no</decor>
-  </application>
-
-</applications>
+  <applications>
+    <application class="*">
+      <decor>no</decor>
+    </application>
+    <!--    <application name="urxvt">
+      <decor>no</decor>
+    </application>
+    <application name="xterm">
+      <decor>no</decor>
+    </application>
+    <application name="chromium-browser">
+      <decor>no</decor>
+      <shade>yes</shade>
+    </application>
+    <application name="dwb">
+      <decor>no</decor>
+    </application>
+    <application class="Firefox">
+      <decor>no</decor>
+    </application>
+    <application name="gvim">
+      <decor>no</decor>
+    </application>
+    <application name="emacs">
+      <decor>no</decor>
+    </application> -->
+  </applications>
   <!-- <applications>
     <application name="Conky"
                  class="Conky"

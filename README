@@ -17,3 +17,10 @@
                      |--rc.xml
            |--tint2/
                    |--tint2rc
+ scripts/
+        |--conditionWeatherScript.py
+        |--tempWeatherScript.py
+        |--unreadGmailCount.py
+ TTF/
+    |--conky_symbols.ttf
+    |--weather.ttf 

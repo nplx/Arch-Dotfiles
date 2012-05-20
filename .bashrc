@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 # Set alias
+alias sudo='sudo '
 alias ls='ls --color=auto'
 alias ..='cd ..'
 alias ...='cd'

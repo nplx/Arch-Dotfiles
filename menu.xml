@@ -18,6 +18,30 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Transmission">
+    <action name="Execute">
+      <command>transmission-gtk</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Teamviewer">
+    <action name="Execute">
+      <command>~/Applications/teamviewer7/./teamviewer</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Wine">
+    <action name="Execute">
+      <command>wine</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-editors-menu" label="Editors">
@@ -109,28 +133,14 @@
 </menu>
 
 <menu id="apps-office-menu" label="Office">
-  <item label="OpenOffice Base">
+  <item label="Calculator">
     <action name="Execute">
-      <command>ooffice -base</command>
-    </action>
-  </item>
-  <item label="OpenOffice Writer">
-    <action name="Execute">
-      <command>ooffice -writer</command>
+      <command>galculator</command>
     </action>
   </item>
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-  <item label="Audacious">
-    <action name="Execute">
-      <command>audacious</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-        <wmclass>Audacious</wmclass>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Ncmpcpp">
     <action name="Execute">
       <command>urxvt -e ncmpcpp</command>
@@ -139,6 +149,14 @@
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
+  <item label="FileZilla">
+    <action name="Execute">
+      <command>filezilla</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Thunar">
     <action name="Execute">
       <command>thunar</command>
@@ -200,14 +218,14 @@
         <command>xterm</command>
       </action>
     </item>
-    <item label="Emacs">
+    <item label="Eclipse">
       <action name="Execute">
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Emacs</name>
+          <name>Eclipse</name>
           <icon></icon>
         </startupnotify>
-        <command>emacs</command>
+        <command>eclipse</command>
       </action>
     </item>
   <separator label="Applications" />

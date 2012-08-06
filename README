@@ -10,6 +10,10 @@
  |--.gvimrc
  |--.emacs
  |--.conkyrc
+ |--.muttrc
+ |--.mutt/
+         |--gmail
+		 |--nplx
  |--.config/
            |--openbox/
                      |--autostart

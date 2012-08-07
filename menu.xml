@@ -157,12 +157,11 @@
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
-	<item label="Fileszilla">
+	<item label="Filezilla">
     <action name="Execute">
-      <command>audacious</command>
+      <command>filezilla</command>
       <startupnotify>
         <enabled>yes</enabled>
-        <wmclass>Audacious</wmclass>
       </startupnotify>
     </action>
   </item>

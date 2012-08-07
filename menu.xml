@@ -130,6 +130,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Hotot">
+    <action name="Execute">
+      <command>hotot-gtk3</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-office-menu" label="Office">
@@ -149,14 +157,16 @@
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
-  <item label="FileZilla">
+	<item label="Fileszilla">
     <action name="Execute">
-      <command>filezilla</command>
+      <command>audacious</command>
       <startupnotify>
         <enabled>yes</enabled>
+        <wmclass>Audacious</wmclass>
       </startupnotify>
     </action>
   </item>
+
   <item label="Thunar">
     <action name="Execute">
       <command>thunar</command>

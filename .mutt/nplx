@@ -15,6 +15,7 @@ set record = "imaps://lotus.x10hosting.com:993/INBOX.Sent"
 set postponed = "imaps://lotus.x10hosting.com:993/INBOX.Drafts"
 set hostname = "nplx.tk"
 set signature = "~/.mutt/sign"
+set pgp_sign_as = 28CF23DD
 # keyboard shortcuts
 #macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"

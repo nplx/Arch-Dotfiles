@@ -1,23 +1,22 @@
-# .mutt/nplx
+# .mutt/****
 
-# Change the following six lines to match your Gmail account details
+# Change the following six lines to match your mail account details
 #account-hook
-set imap_user = "nplx@nplx.tk"
-set smtp_url = "smtps://lotus.x10hosting.com:465"
-source "gpg -d ~/.mutt/nplxpsw.gpg |"
-set from = "nplx@nplx.tk"
-set realname = "nplx"
+set imap_user = "************"
+set smtp_url = "smtps://****************.com:465"
+source "gpg -d ~/.mutt/*******.gpg |"
+set from = "****@*******"
+set realname = "****"
 # Basic config, you can leave this as is
-set folder = "imaps://lotus.x10hosting.com:993"
-set spoolfile = "imaps://lotus.x10hosting.com:993"
-set mbox = "imaps://lotus.x10hosting.com:993"
-set record = "imaps://lotus.x10hosting.com:993/INBOX.Sent"
-set postponed = "imaps://lotus.x10hosting.com:993/INBOX.Drafts"
-set hostname = "nplx.tk"
+set folder = "imaps://****************.com:993"
+set spoolfile = "imaps://****************.com:993"
+set mbox = "imaps://****************.com:993"
+set record = "imaps://****************.com:993/inbox.Sent"
+set postponed = "imaps://****************.com:993/inbox.drafts"
+set hostname = "*******"
 set signature = "~/.mutt/sign"
 set pgp_sign_as = 28CF23DD
 # keyboard shortcuts
-#macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager gs "<change-folder>=INBOX.Sent<enter>" "Go to sent messages"
 macro index,pager gt "<change-folder>=INBOX.Trash<enter>" "Go to trash"

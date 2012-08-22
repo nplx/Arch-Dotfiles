@@ -8,7 +8,8 @@ Xft*antialias:                   1
 Xft*rgba:                        rgb
 
 *foreground:     #EDEDED
-*background:     #131300
+!*background:     #131300
+*background:     #000000
 !black
 *color0:         #2E3436
 *color8:         #555753
@@ -35,8 +36,7 @@ Xft*rgba:                        rgb
 *color15:        #E3E3E3
 
 ! URxvt ------------------------------------
-URxvt.saveLines:   3000
-!URxvt*saveLines:   500
+URxvt*saveLines:   500
 URxvt*termName: rxvt-unicode
 
 !URxvt*font:xft:Envy Code R:size=10:regular,xft:WenQuanYi Bitmap Song:size=9:regular
@@ -62,11 +62,11 @@ URxvt.keysym.M-Down: command: \
         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold\007 \
         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic\007
 
-urxvt*geometry:                  124x46+5+30
+!!urxvt*geometry:                  124x46+5+30
 urxvt*inputMethod:               ibus
 urxvt*depth:                     32
-urxvt*scrollBar:                 false
 urxvt*borderLess:                false
+urxvt*scrollBar:                 false
 urxvt*matcher.button:            1
 urxvt*cursorBlink:               true
 urxvt*cursorColor:               #258aef
@@ -81,7 +81,7 @@ urxvt*urgentOnBell:              true
 
 !!------------Clickable------------------
 !!URxvt.perl-ext-common: default,matcher
-URxvt*urlLauncher: w3m
+URxvt*urlLauncher: dwb
 !!URxvt.matcher.button: 2
 URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 !! Colors
@@ -102,7 +102,7 @@ xterm*colorUL: yellow
 xterm*colorBD: white
 
 !fix alt key input 
-!xterm*eightBitInput: false
+!xterm*eightBitInput: true
 !xterm*altSendsEscape: true
 
 !font and locale
@@ -110,22 +110,23 @@ xterm*locale: true
 xterm*utf8:     true
 xterm*utf8Title: true
 xterm*fontMenu*fontdefault*Label: Default
-!xterm*faceName: Monaco:antialias=True:pixelsize=10
-!xterm*faceName: AR PL Uming CN:pixelsize=12
 xterm*faceName: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=11
 xterm*boldFont: DejaVu Sans Mono for Powerline:style=Bold:pixelsize=11
 xterm*faceNameDoublesize: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=18
-xterm*xftAntialias: true
+!xterm*xftAntialias: true
 !xterm*cjkWidth:false
 !xterm*preeditType:Root
 
 ! Emacs settings -----------------------------------
-Emacs*geometry: 122x36+6+30
+!Zen Hei
+!Emacs*geometry: 122x35+6+34
+!Bitmap Song
+Emacs*geometry: 158x44
 !Emacs.cursorColor: yellow
 Emacs*borderWidth: 0
 Emacs*internalBorder: 0
-!Emacs.background: black
-!Emacs.foreground: white
+Emacs.background: black
+Emacs.foreground: white
 !Emacs.pointerColor: yellow
 Emacs*borderColor: black
 Emacs*mode-line*attributeBackground: black

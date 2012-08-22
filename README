@@ -17,6 +17,9 @@
          |--gmail
 		 |--nplx
 		 |--gpg.rc
+		 |--.gmail.muttrc
+		 |--.nplx.muttrc
+		 |--color
  |--.config/
            |--openbox/
                      |--autostart

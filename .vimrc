@@ -20,3 +20,4 @@ set ch=2
 set laststatus=2
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 let Powerline_symbols = 'fancy'
+au BufRead /tmp/mutt-* set tw=72

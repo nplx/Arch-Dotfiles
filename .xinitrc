@@ -15,6 +15,9 @@ if [ -f /$HOME/.Xmodmap ]; then
   /usr/bin/xmodmap $HOME/.Xmodmap
 fi
 
+# Set Wallpaper
+eval `cat ~/.fehbg` &
+
 # Set Transparent
 #xcompmgr -n &
 #xcompmgr -nCcfF -I-0.15 -O-.03 -D4 -l-5 -r4.2 -o.75 &
@@ -26,9 +29,6 @@ fi
 
 # Set conky
 exec conky &
-
-# Set Wallpaper
-eval `cat ~/.fehbg` &
 
 # Run Dropbox
 #exec dropboxd &

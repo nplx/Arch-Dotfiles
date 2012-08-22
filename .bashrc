@@ -23,9 +23,9 @@ alias reload='source ~/.bashrc'
 alias close='killall screen'
 alias fehview='feh -g 512x384 --zoom fill -. -x'
 alias fehlist='feh -l -r'
-#alias fehbg='feh --bg-scale'
-#alias ardef="sudo ip route add default dev ppp0"
 alias rt="rtorrent"
+alias mutt="mutt -F ~/.mutt/.gmail.muttrc"
+alias muttnplx="mutt -F ~/.mutt/.nplx.muttrc"
 alias mounvideo="sudo mount -t cifs -o username=Administrator //192.168.1.100/Videos /mnt/videos"
 alias mounmusic="sudo mount -t cifs -o username=Administrator //192.168.1.100/Music /mnt/music"
 alias mounwork="sudo mount -t cifs -o username=Administrator //192.168.1.100/Workspace /mnt/work"
@@ -33,7 +33,7 @@ alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
 alias sublime="~/Applications/Sublime\ Text\ 2/./sublime_text"
 alias sshcjb="ssh nplx@216.194.70.6 -p 443"
 alias scpcjb="scp nplx@216.194.70.6 -p 443:"
-alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
+#alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
 
 #PS1='[\u@\h \W]\$ '
 PS1='\[\033[0m\]┌──[\[\033[1;32m\]\u\[\033[0;33m\]@\[\033[1;32m\]\H\[\033[0m\]]──(\[\033[1;32m\]\w\[\033[0m\])\n\[\033[0m\]└──► \[\033[0m\]'

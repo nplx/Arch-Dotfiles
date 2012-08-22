@@ -10,6 +10,8 @@
  |--.gvimrc
  |--.emacs
  |--.conkyrc
+ |--.ncmpcpp/
+ 			|--config
  |--.muttrc
  |--.mutt/
          |--gmail

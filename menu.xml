@@ -146,6 +146,11 @@
       <command>galculator</command>
     </action>
   </item>
+  <item label="Abiword">
+    <action name="Execute">
+      <command>abiword</command>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">

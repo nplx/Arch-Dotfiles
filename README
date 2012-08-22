@@ -11,7 +11,7 @@
  |--.emacs
  |--.conkyrc
  |--.ncmpcpp/
- 			|--config
+			|--config
  |--.muttrc
  |--.mutt/
          |--gmail

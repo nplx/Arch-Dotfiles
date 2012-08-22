@@ -15,8 +15,10 @@ own_window_type desktop
 #own_window_type dock
 own_window_hints undecorate,sticky,skip_taskbar,skip_pager
 
-net_avg_samples 3
-cpu_avg_samples 3
+net_avg_samples 1
+cpu_avg_samples 1
+# net_avg_samples 3
+# cpu_avg_samples 3
 
 #borders
 draw_borders no
@@ -40,7 +42,7 @@ total_run_times 0
 default_color ffffff
 #default_shade_color 000000
 #own_window_color 000000
-color0 2f5ae8
+color0 4774a7
 color1 f2f2f2
 color2 a3c2e1
 
@@ -60,4 +62,4 @@ mpd_host 127.0.0.1
 mpd_port 6600
 
 TEXT
-${color0}[${color}${color2}${kernel}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 100}${color0}[${color}${color green}${mpd_track} - ${mpd_title} - ${mpd_artist} ${mpd_bar 5,50}${color}${color0}]${color}${else}${alignc}${offset 100}${color0}[${color}${color2}${time %A %d %m}${color}${color0}]${color}${endif}${alignr}${offset 7}${color0}[${color}${voffset -1}${color1}${font Conkysymbols:pixelsize=13}c${font}${color}${voffset -3}:${color}${color2}${execi 300 python ~/Files/Scripts/Py/unreadGmailCount.py | grep '^.'}${color}${color0}][${color}${voffset -5}${color1}${font Weather:pixelsize=24}${execi 300 python ~/Files/Scripts/Py/conditionsWeatherScript.py | grep '^.'}${font}${color}${offset 4}${voffset -6.5}${color2}${execi 1800 python ~/Files/Scripts/Py/tempWeatherScript.py | grep '[0-9]$'}${color}${color1}°C${color}${color0}][${color}${color1}${font Conkysymbols:pixelsize=9}d${font}${color}:${color2}${upspeedf eth0}${color}${offset -18}${color1}kb/s${color} ${color1}${font Conkysymbols:pixelsize=9}e${font}:${color}${color2}${downspeedf eth0}${color}${offset -18}${color1}kb/s${color}${color0}]${color}
+${color0}[${color}${color2}${kernel}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 100}${color0}[${color}${color green}${mpd_track} - ${mpd_title} - ${mpd_artist} ${mpd_bar 5,50}${color}${color0}]${color}${else}${alignc}${offset 100}${color0}[${color}${color2}${time %A %d %m}${color}${color0}]${color}${endif}${alignr}${offset 7}${color0}[${color}${voffset -1}${color1}${font Conkysymbols:pixelsize=13}c${font}${color}${voffset -3}:${color}${color2}${execi 300 python ~/Files/Scripts/Py/unreadGmailCount.py | grep '^.'}${color}${color0}][${color}${voffset -5}${color1}${font Weather:pixelsize=24}${execi 300 python ~/Files/Scripts/Py/conditionsWeatherScript.py | grep '^.'}${font}${color}${offset 4}${voffset -6.5}${color2}${execi 600 python ~/Files/Scripts/Py/tempWeatherScript.py | grep '[0-9]$'}${color}${color1}°C${color}${color0}][${color}${color1}${font Conkysymbols:pixelsize=9}d${font}${color}:${color2}${upspeedf eth0}${color}${offset -18}${color1}kb/s${color} ${color1}${font Conkysymbols:pixelsize=9}e${font}:${color}${color2}${downspeedf eth0}${color}${offset -18}${color1}kb/s${color}${color0}]${color}

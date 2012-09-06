@@ -1,13 +1,13 @@
 # .mutt/gmail
 
 # Change the following six lines to match your Gmail account details
-my_hdr From: ******* ** <*********@gmail.com>
-set imap_user = "*********@gmail.com"
-set smtp_url = "smtps://*********@smtp.gmail.com:465"
-source "gpg -d ~/.mutt/********.gpg |"
-set from = "*******************"
-set realname = "******* **"
-set pgp_sign_as = ********
+my_hdr From: Charles Gu <geekychen@gmail.com>
+set imap_user = "geekychen@gmail.com"
+set smtp_url = "smtps://geekychen@smtp.gmail.com:465"
+source "gpg -d ~/.mutt/gmailpsw.gpg |"
+set from = "geekychen@gmail.com"
+set realname = "Charles Gu"
+set pgp_sign_as = 8D13C98A
 
 # Basic config, you can leave this as is
 set folder = "imaps://imap.gmail.com:993"

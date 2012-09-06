@@ -4,32 +4,30 @@
 source ~/.mutt/color
 
 # Load account files
-#folder-hook 'gmail.com' 'source ~/.mutt/gmail'
 folder-hook 'nplx.tk' 'source ~/.mutt/nplx'
 
 # Default mail account
 source ~/.mutt/nplx
-#source ~/.mutt/gmail
 
 # access GnuPG tool
 source ~/.mutt/gpg.rc
 
 # Change the following line to a different editor you prefer.
-#set editor = "vim"
-set editor = "vim '+/^$'"
-#set editor = "emacsclient +8 %s -a emacs"
+#set editor = "vim '+/^$'"
+set editor = "emacs -nw -Q --color=auto"
 
 # Basic config, you can leave this as is
 set charset = utf-8
 set send_charset = utf-8
 set imap_check_subscribed
 set mail_check = 15
-set timeout = 300
-set imap_keepalive = 300
+set timeout = 900
+set imap_keepalive = 900
 #set edit_headers = yes
 set header_cache = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
 set certificate_file = ~/.mutt/certificates
+set ssl_force_tls = yes
 set ssl_starttls = yes
 set move = no
 set include
@@ -42,6 +40,9 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
 bind index "^" imap-fetch-mail
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
 
 macro pager \cb <pipe-entry>'urlview'<enter> 'Follow the link in w3m'
 
@@ -54,7 +55,7 @@ set sidebar_visible=yes
 mailboxes =Inbox
 
 # color of folders with new mail
-color sidebar_new yellow default
+color sidebar_new green default
 
 # ctrl-n, ctrl-p to select next, prev folder
 # ctrl-o to open selected folder

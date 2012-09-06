@@ -33,4 +33,5 @@
         |--unreadGmailCount.py
  TTF/
     |--conky_symbols.ttf
-    |--weather.ttf 
+    |--weather.ttf
+    |--ConkyWeather.ttf 

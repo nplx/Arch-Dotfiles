@@ -48,10 +48,10 @@ launcher_icon_theme = Faenza
 launcher_padding = 2 2 8
 launcher_background_id = 
 lancher_icon_size = 24
-launcher_item_app = /usr/share/applications/firefox.desktop
+#launcher_item_app = /usr/share/applications/firefox.desktop
+launcher_item_app = /usr/share/applications/chromium.desktop
 launcher_item_app = /usr/share/applications/emacs.desktop
 launcher_item_app = /usr/share/applications/gvim.desktop
-launcher_item_app = /usr/share/applications/gedit.desktop
 launcher_item_app = /usr/share/applications/Thunar.desktop
 launcher_item_app = /usr/share/applications/AdobeReader.desktop
 
@@ -80,7 +80,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = wqy-zenhei 8
+task_font = WenQuanYi Bitmap Song 8
 task_font_color = #FFFFFF 100
 task_active_font_color = #FFFFFF 80
 task_urgent_font_color = #FFFFFF 80
@@ -99,7 +99,7 @@ systray_icon_asb = 70 0 0
 time1_format = %H:%M
 time1_font = Anonymous Pro 12
 #time2_format = %A %d %B
-time2_font = RawengukSans 10
+#time2_font = RawengukSans 10
 clock_font_color = #FFFFFF 100
 clock_padding = 1 0
 clock_background_id = 0

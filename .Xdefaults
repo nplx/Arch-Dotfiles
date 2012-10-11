@@ -46,23 +46,40 @@ URxvt*termName: rxvt-unicode
 !URxvt.boldFont:          xft:DejaVu LGC Sans Mono:size=10:bold
 !URxvt.italicFont:        xft:DejaVu LGC Sans Mono:size=10:oblique
 
-URxvt.font:       [codeset=ASCII]xft:Envy Code R for Powerline:size=10,\
-                  [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
-URxvt.boldFont:   [codeset=ASCII]xft:Envy Code R for Powerline:bold:size=10,\
-                  [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
-URxvt.italicFont: [codeset=ASCII]xft:Envy Code R for Powerline:italic:size=10,\
-                  [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+URxvt.font:       [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8,\
+                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular
+URxvt.boldFont:   [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8,\
+                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold
+URxvt.italicFont: [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8,\
+                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic
 
 URxvt.keysym.M-Up: command: \
-        \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular:size=9\007 \
-        \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold:size=9\007 \
-        \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic:size=9\007
+        \033]710;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular:size=8\007 \
+        \033]711;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold:size=8\007 \
+        \033]712;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic:size=8\007
 URxvt.keysym.M-Down: command: \
-        \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular\007 \
-        \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold\007 \
-        \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=10, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic\007
+        \033]710;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular\007 \
+        \033]711;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold\007 \
+        \033]712;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic\007
 
-!!urxvt*geometry:                  124x46+5+30
+! URxvt.font:       [codeset=ASCII]xft:Envy Code R for Powerline:size=8,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+! 
+! URxvt.keysym.M-Up: command: \
+!         \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular:size=8\007 \
+!         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold:size=8\007 \
+!         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic:size=8\007
+! URxvt.keysym.M-Down: command: \
+!         \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular\007 \
+!         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold\007 \
+!         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic\007
+
+urxvt*geometry:                  124x53+5+30
+!!urxvt*geometry:                  80x30
 urxvt*inputMethod:               ibus
 urxvt*depth:                     32
 urxvt*borderLess:                false
@@ -97,31 +114,30 @@ xterm*cursorBlink: true
 xterm*background:  black
 xterm*foreground:  gray
 xterm*borderLess: true
+xterm*activeIcon: true
 xterm*cursorBlink: true
 xterm*colorUL: yellow
 xterm*colorBD: white
 
-!fix alt key input 
+!input & fix alt key
+xterm*inputMethod: ibus
 !xterm*eightBitInput: true
 !xterm*altSendsEscape: true
 
 !font and locale
-xterm*locale: true
-xterm*utf8:     true
-xterm*utf8Title: true
+!xterm*locale: true
+!xterm*utf8:     true
+!xterm*utf8Title: true
 xterm*fontMenu*fontdefault*Label: Default
 xterm*faceName: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=11
 xterm*boldFont: DejaVu Sans Mono for Powerline:style=Bold:pixelsize=11
-xterm*faceNameDoublesize: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=18
+xterm*faceNameDoublesize: YaHei Consolas Hybrid:antialias=True:pixelsize=11
 !xterm*xftAntialias: true
-!xterm*cjkWidth:false
+!xterm*cjkWidth:true
 !xterm*preeditType:Root
 
-! Emacs settings -----------------------------------
-!Zen Hei
-!Emacs*geometry: 122x35+6+34
-!Bitmap Song
-Emacs*geometry: 158x44
+!------------ Emacs settings ------------
+Emacs*geometry: 160x44+6+30
 !Emacs.cursorColor: yellow
 Emacs*borderWidth: 0
 Emacs*internalBorder: 0

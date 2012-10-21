@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+[[ $TERM != screen* ]] && exec tmux -2
 # Set alias
 alias sudo='sudo '
 alias ls='ls --color=auto'
@@ -21,6 +22,7 @@ alias du='du -h -c'
 alias grep='grep --color=auto'
 alias reload='source ~/.bashrc'
 alias close='killall screen'
+alias shred='shred -vfz -n 30'
 alias fehview='feh -g 512x384 --zoom fill -. -x'
 alias fehlist='feh -l -r'
 alias rt="rtorrent"

@@ -18,7 +18,7 @@
 #nm-applet &
 
 #Set xcompmgr-dana
-xcompmgr -fF -t-5 -l-5 -r4.2 -o.55 -D2 -m.83 &
+(sleep 2s && xcompmgr -fF -t-5 -l-5 -r4.2 -o.55 -D3.2 -m.83) &
 
 #Run transset
 transset-df .70 -n Conky &
@@ -32,3 +32,5 @@ volumeicon &
 #Run clipit
 clipit &
 
+#Run mpd
+mpd ~/.mpdconf &

@@ -19,9 +19,8 @@ fi
 eval `cat ~/.fehbg` &
 
 # Set Transparent
-#xcompmgr -n &
-#xcompmgr -nCcfF -I-0.15 -O-.03 -D4 -l-5 -r4.2 -o.75 &
-#transset-df .65 > /dev/null &
+#xcompmgr -nCc &
+#xcompmgr -nCcfF -I-0.15 -O-.03 -D2 -r2 -o.75 &
  
 ##
 # Set tint2
@@ -39,5 +38,5 @@ exec conky &
 
 #exec dwm
 #exec openbox-session
-exec ck-launch-session dbus-launch openbox-session
-#exec ck-launch-session dbus-launch $HOME/.xstart
+exec dbus-launch openbox-session
+#exec dbus-launch --exit-with-session openbox-session

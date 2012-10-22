@@ -26,6 +26,7 @@ alias shred='shred -vfz -n 30'
 alias fehview='feh -g 512x384 --zoom fill -. -x'
 alias fehlist='feh -l -r'
 alias rt="rtorrent"
+alias nload="nload -u K -i 1000 -o 1000"
 alias mutt="mutt -F ~/.mutt/.gmail.muttrc"
 alias muttnplx="mutt -F ~/.mutt/.nplx.muttrc"
 alias mounvideo="sudo mount -t cifs -o username=Administrator //192.168.1.100/Videos /mnt/videos"
@@ -41,6 +42,7 @@ alias youtubestream="~/Files/Scripts/Shell/./youtubestream.sh"
 alias yt3="youtube-viewer -3"
 alias mplayer="mplayer -osdlevel 3 -framedrop "
 alias wallproxy="python2 ~/Applications/WallProxy/startup.py > /dev/null 2>&1 &"
+alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.list & pacman -Qqm > ~/.yaourt_backup.list'
 
 PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]\n\[\033[0m\]└──► \[\033[0m\]'
 
@@ -51,7 +53,7 @@ PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 
 # Set xterm transparent
-[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .75 >/dev/null
+[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .70 >/dev/null
 # Set xterm 256 color
 export TERM="xterm-256color"
 # Include ibus input module

@@ -154,7 +154,7 @@
      cases. -->
   <margins>
     <top>0</top>
-    <bottom>0</bottom>
+    <bottom>20</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -361,7 +361,7 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="A-F13">
+    <keybind key="A-F1">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -370,7 +370,14 @@
         <command>urxvt</command>
       </action>
     </keybind>
-    <keybind key="A-F1">
+    <keybind key="A-F13">
+      <action name="Execute">
+        <enable>true</enable>
+        <name>xterm</name>
+        <command>xterm</command>
+      </action>
+    </keybind>
+    <keybind key="A-F2">
       <action name="Execute">
         <enable>true</enable>
         <name>Terminator</name>
@@ -736,18 +743,21 @@
   <!-- show the manage desktops section in the client-list-(combined-)menu -->
 </menu>
   <applications>
-    <application class="*">
-      <decor>no</decor>
-    </application>
-    <!--    <application name="urxvt">
+    <application name="urxvt">
       <decor>no</decor>
     </application>
     <application name="xterm">
       <decor>no</decor>
     </application>
-    <application name="chromium-browser">
+  	<application class="MPlayer">
+      <decor>no</decor>
+  	</application>
+    <application name="chromium">
       <decor>no</decor>
       <shade>yes</shade>
+    </application>
+    <application name="opera">
+      <decor>no</decor>
     </application>
     <application name="dwb">
       <decor>no</decor>
@@ -760,7 +770,13 @@
     </application>
     <application name="emacs">
       <decor>no</decor>
-    </application> -->
+    </application>
+    <application name="thunar">
+      <decor>no</decor>
+    </application>
+    <application name="mplayer">
+      <decor>no</decor>
+    </application>
   </applications>
   <!-- <applications>
     <application name="Conky"

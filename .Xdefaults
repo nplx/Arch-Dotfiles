@@ -36,7 +36,7 @@ Xft*rgba:                        rgb
 *color15:        #E3E3E3
 
 ! URxvt ------------------------------------
-URxvt*saveLines:   500
+URxvt*saveLines:   1500
 URxvt*termName: rxvt-unicode
 
 !URxvt*font:xft:Envy Code R:size=10:regular,xft:WenQuanYi Bitmap Song:size=9:regular
@@ -78,8 +78,8 @@ URxvt.keysym.M-Down: command: \
 !         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold\007 \
 !         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic\007
 
-urxvt*geometry:                  124x53+5+30
-!!urxvt*geometry:                  80x30
+!!urxvt*geometry:                  124x53+5+30
+urxvt*geometry:                  80x30
 urxvt*inputMethod:               ibus
 urxvt*depth:                     32
 urxvt*borderLess:                false

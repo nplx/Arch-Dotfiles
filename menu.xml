@@ -34,14 +34,6 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Wine">
-    <action name="Execute">
-      <command>wine</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
 </menu>
 
 <menu id="apps-editors-menu" label="Editors">
@@ -114,9 +106,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Firefox">
+  <item label="Opera">
     <action name="Execute">
-      <command>firefox</command>
+      <command>opera</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -125,14 +117,6 @@
   <item label="dwb (TP)">
     <action name="Execute">
       <command>dwb</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Hotot">
-    <action name="Execute">
-      <command>hotot-gtk3</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

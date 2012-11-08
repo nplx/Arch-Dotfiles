@@ -86,7 +86,8 @@ urxvt*borderLess:                false
 urxvt*scrollBar:                 false
 urxvt*matcher.button:            1
 urxvt*cursorBlink:               true
-urxvt*cursorColor:               #258aef
+!urxvt*cursorColor:               #258aef
+urxvt*cursorColor:				 Green
 urxvt*allow_bold:                true
 urxvt*internalBorder:            10
 !!urxvt*inheritPixmap:             true
@@ -97,8 +98,8 @@ urxvt*shading:                   100
 urxvt*urgentOnBell:              true
 
 !!------------Clickable------------------
-!!URxvt.perl-ext-common: default,matcher
-URxvt*urlLauncher: dwb
+URxvt.perl-ext-common: default,matcher
+URxvt*urlLauncher: /usr/bin/dwb
 !!URxvt.matcher.button: 2
 URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 !! Colors
@@ -112,10 +113,11 @@ xterm*rightScrollBar: true
 xterm*loginshell: true
 xterm*cursorBlink: true
 xterm*background:  black
-xterm*foreground:  gray
+xterm*foreground:  grey
+!xterm*foreground:  green
+xterm*cursorColor:  green
 xterm*borderLess: true
 xterm*activeIcon: true
-xterm*cursorBlink: true
 xterm*colorUL: yellow
 xterm*colorBD: white
 
@@ -137,13 +139,13 @@ xterm*faceNameDoublesize: YaHei Consolas Hybrid:antialias=True:pixelsize=11
 !xterm*preeditType:Root
 
 !------------ Emacs settings ------------
-Emacs*geometry: 160x44+6+30
+Emacs*geometry: 120x35
 !Emacs.cursorColor: yellow
 Emacs*borderWidth: 0
 Emacs*internalBorder: 0
-Emacs.background: black
-Emacs.foreground: white
+!Emacs.background: black
+!Emacs.foreground: white
 !Emacs.pointerColor: yellow
 Emacs*borderColor: black
-Emacs*mode-line*attributeBackground: black
-Emacs*mode-line*attributeForeground: white
+!Emacs*mode-line*attributeBackground: black
+!Emacs*mode-line*attributeForeground: white

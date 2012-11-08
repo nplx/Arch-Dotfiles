@@ -17,14 +17,12 @@
 #xfce4-power-manager &
 #nm-applet &
 
-#Set xcompmgr-dana
-(sleep 2s && xcompmgr -fF -t-5 -l-5 -r4.2 -o.55 -D3.2 -m.83) &
+#Set compmgr
+#(sleep 2s && xcompmgr -cCfF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.9 -m.82) & #With shadow
+(sleep 2s && xcompmgr -fF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.9 -m.82) & #No shadow
 
 #Run transset
 transset-df .70 -n Conky &
-
-#Run Panel
-tint2 &
 
 #Run volume tray icon
 volumeicon &
@@ -32,5 +30,14 @@ volumeicon &
 #Run clipit
 clipit &
 
+#Run gae proxy
+#python2 ~/Applications/WallProxy/startup.py &
+#python2 ~/Applications/GoAgent/proxy.py &
+
 #Run mpd
 mpd ~/.mpdconf &
+
+#Run Panel
+tint2 &
+
+

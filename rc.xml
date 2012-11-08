@@ -749,9 +749,9 @@
     <application name="xterm">
       <decor>no</decor>
     </application>
-  	<application class="MPlayer">
+    <application class="MPlayer">
       <decor>no</decor>
-  	</application>
+    </application>
     <application name="chromium">
       <decor>no</decor>
       <shade>yes</shade>

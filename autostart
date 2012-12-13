@@ -18,8 +18,12 @@
 #nm-applet &
 
 #Set compmgr
-#(sleep 2s && xcompmgr -cCfF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.9 -m.82) & #With shadow
-(sleep 2s && xcompmgr -fF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.9 -m.82) & #No shadow
+#(sleep 2s && xcompmgr -cCfF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.5 -m.82) & #With shadow
+#(sleep 2s && xcompmgr -fF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.5 -m.82) & #No shadow
+
+#Set compton
+#compton -CGb & #Quick start
+compton --config ~/.compton.conf -b & #With config file
 
 #Run transset
 transset-df .70 -n Conky &
@@ -32,7 +36,7 @@ clipit &
 
 #Run gae proxy
 #python2 ~/Applications/WallProxy/startup.py &
-#python2 ~/Applications/GoAgent/proxy.py &
+python2 ~/Applications/GoAgent/proxy.py &
 
 #Run mpd
 mpd ~/.mpdconf &

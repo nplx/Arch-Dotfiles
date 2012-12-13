@@ -9,8 +9,8 @@
 ;;	  (width . 100) (height . 36)
 ;;	  (font . "")
 ;;	  ))
-(setq initial-frame-alist 
-	  '((width . 72) (height . 36)))
+;(setq initial-frame-alist 
+;	  '((width . 72) (height . 36)))
 ;;
 ;;== User ==
 (setq user-full-name "Charles Gu")
@@ -60,9 +60,11 @@
 (color-theme-initialize)
 (setq color-theme-is-global t)
 ;;(color-theme-comidia)
-(color-theme-deep-blue)
+;;(color-theme-deep-blue)
+;;(color-theme-clarity)
 ;;(color-theme-oswald)
-;;(color-theme-hober)
+;;(color-theme-lawrence)
+(color-theme-charcoal-black)
 ;;(color-theme-matrix)
 ;;
 ;;== Dispaly time ==
@@ -105,6 +107,7 @@
 ;;== Font ==
 ;(set-default-font "WenQuanYi Zen Hei Mono-12")
 (set-default-font "WenQuanYi Bitmap Song-8")
+;(set-default-font "YaHei Consolas Hybrid-12")
 ;(set-frame-font "DejaVu Sans Mono-10")
 ;(set-frame-font "Inconsolata-12")
 ;;

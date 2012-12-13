@@ -1,13 +1,5 @@
-"winpos 480 26
-"filetype plugin on
-set lines=60
-set columns=170
-"syntax on
-colorscheme wuye
-"set guioptions-=T
-"set nu
-"set tabstop=4
-"set shiftwidth=4
-"set vb
-"set ch=2
+winpos 38 34
+set lines=45
+set columns=132
 set mouse=a
+"set guifont=YaHei\ Consolas\ Hybrid\ 10

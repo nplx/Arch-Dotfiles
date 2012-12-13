@@ -62,6 +62,7 @@ URxvt.keysym.M-Down: command: \
         \033]711;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold\007 \
         \033]712;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic\007
 
+!
 ! URxvt.font:       [codeset=ASCII]xft:Envy Code R for Powerline:size=8,\
 !                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
 ! URxvt.boldFont:   [codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8,\

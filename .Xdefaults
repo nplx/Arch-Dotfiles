@@ -8,7 +8,6 @@ Xft*antialias:                   1
 Xft*rgba:                        rgb
 
 *foreground:     #EDEDED
-!*background:     #131300
 *background:     #000000
 !black
 *color0:         #2E3436

@@ -9,6 +9,7 @@
 # Set prompt
 PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]\n\[\033[0m\]└──► \[\033[0m\]'
 
+#fortune -a | cowsay -f stegosaurus
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 # echo -e "\033[1;36m|¯¯¯¯¯¯¯||¯|\¯\'|¯| |¯|  /¯¯/\¯¯\|¯¯¯¯¯¯¯|  |¯ \|¯|/¯/\¯\  /¯/\¯\|¯ \|¯||¯|\¯\ "
 # echo -e "\033[1;35m'¯¯|'|¯¯’|'|/ / |'|_|'|__\  '\'¯¯'¯¯|'|¯¯’  |'|\ '|| ||'|  | ||'||'|\ '|| ’'>_ "
@@ -16,7 +17,7 @@ PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 
 # Set xterm transparent
-[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .70 >/dev/null
+[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .80 >/dev/null
 # Set xterm 256 color
 export TERM="xterm-256color"
 # Include ibus/fcitx input module
@@ -85,6 +86,12 @@ function wakeupneo(){
 	sleep 5
 	clear
 }
+# Public IP check
+#
+function pubip_check(){
+	PUBIP=$(curl -s ifconfig.me)
+	echo -e "Your Public IP is:\033[1;34m[\033[1;37m$PUBIP\033[1;34m]"
+}
 # Proxy
 #
 function proxyon(){
@@ -92,8 +99,8 @@ function proxyon(){
     export https_proxy="http://127.0.0.1:8087/"
     export ftp_proxy="http://127.0.0.1:8087/"
 #    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-	PUBIP=$(curl -s http://ifconfig.me)
-    echo -e "Proxy is on.\nYour public IP is:$PUBIP\nHave fun!"
+	PUBIP=$(curl -s ip.nu | awk '/[0-9]/ {print $5}')
+    echo -e "Proxy is on.\nYour public IP is:\033[1;32m$PUBIP\n\033[0mHave fun!"
 }
 function proxyoff(){
     unset HTTP_PROXY
@@ -102,8 +109,9 @@ function proxyoff(){
     unset https_proxy
     unset FTP_PROXY
     unset ftp_proxy
-	PUBIP=$(curl -s http://ifconfig.me)
-	echo -e "Proxy is off.\nYour public IP is:$PUBIP\nYou're on your own now."
+#	PUBIP=$(curl -s ip.nu | awk '/[0-9]/ {print $5}')
+	PUBIP=$(curl -s ifconfig.me)
+	echo -e "Proxy is off.\nYour public IP is:\033[1;31m$PUBIP\n\033[0mYou're on your own now."
 } 
 function wiki(){
 	dig +short txt "$*".wp.dg.cx;

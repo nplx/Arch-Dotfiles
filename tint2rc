@@ -48,10 +48,11 @@ launcher_icon_theme = Faenza
 launcher_padding = 2 2 4
 launcher_background_id = 
 lancher_icon_size = 24
-launcher_item_app = /usr/share/applications/opera-browser.desktop
-#launcher_item_app = /usr/share/applications/chromium.desktop
+#launcher_item_app = /usr/share/applications/dwb.desktop
+launcher_item_app = /usr/share/applications/icecat.desktop
 launcher_item_app = /usr/share/applications/emacs.desktop
 launcher_item_app = /usr/share/applications/gvim.desktop
+launcher_item_app = /usr/share/applications/wireshark.desktop
 launcher_item_app = /usr/share/applications/Thunar.desktop
 launcher_item_app = /usr/share/applications/AdobeReader.desktop
 

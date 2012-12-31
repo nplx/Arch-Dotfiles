@@ -38,5 +38,7 @@ exec conky &
 
 #exec dwm
 #exec openbox-session
-exec dbus-launch openbox-session
+exec dbus-launch openbox-session 
 #exec dbus-launch --exit-with-session openbox-session
+
+

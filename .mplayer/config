@@ -1,0 +1,18 @@
+# Write your default config options here!
+# Cache
+#cache=8192
+#cache-min=4
+#cache=15264
+#cache-min=30
+# Video Output
+#vo=x11
+vo=xv
+double=yes
+subfont-osd-scale=1
+subfont-autoscale=2
+subfont-text-scale=2
+subalign=2
+subpos=96
+spuaa=20
+framedrop=1
+hardframedrop=0

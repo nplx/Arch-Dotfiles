@@ -21,6 +21,8 @@
 		 |--.gmail.muttrc
 		 |--.nplx.muttrc
 		 |--color
+ |--.mplayer/
+ 			|--config
  |--.config/
            |--openbox/
                      |--autostart

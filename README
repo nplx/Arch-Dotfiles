@@ -31,10 +31,11 @@
            |--tint2/
                    |--tint2rc
  scripts/
-        |--conditionWeatherScript.py
-        |--tempWeatherScript.py
+ 		|--conkyWeatherOutput.py
         |--unreadGmailCount.py
-		|--weatherUndergrouund.py
+		|--wu.py
+		|--yc.py
+        |--newmailnotifier.py
  TTF/
     |--conky_symbols.ttf
     |--weather.ttf

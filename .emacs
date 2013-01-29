@@ -16,6 +16,11 @@
 (setq user-full-name "Charles Gu")
 (setq user-mail-address "nplx@nplx.tk")
 ;;
+;;== EasyPG: GPG support (decrypt in buffer; save encrypted) ==
+(require 'epa-file)
+(epa-file-enable)
+(setq epa-armor t) ; use ASCII armored encryption
+(custom-set-variables '(epa-file-name-regexp "\\.\\(asc\\|gpg\\|gpg~\\|asc~\\)\\'"))
 ;;== tramp ==
 (require 'tramp)
 (setq tramp-default-method "scp")

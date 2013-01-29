@@ -37,6 +37,12 @@ clipit &
 python2 ~/Applications/WallProxy/startup.py &
 #python2 ~/Applications/GoAgent/proxy.py &
 
+#Run my mail notifier
+python ~/Files/Scripts/Py/newmailnotifier.py &
+
+# Start Synergy
+synergys &
+
 #Run mpd
 mpd ~/.mpdconf &
 

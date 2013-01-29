@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 <menu id="apps-accessories-menu" label="Accessories">
   <item label="Dropbox">
@@ -106,17 +105,9 @@
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
-  <item label="Chromium">
+  <item label="Icecat">
     <action name="Execute">
-      <command>chromium</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Opera">
-    <action name="Execute">
-      <command>opera</command>
+		<command>~/Applications/Icecat-17.0.1/./icecat</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -146,7 +137,20 @@
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-  <item label="Ncmpcpp">
+   <item label="VLC">
+    <action name="Execute">
+	  <command>vlc</command>
+	  <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+   </item>
+   <item label="FreeTux TV">
+    <action name="Execute">
+      <command>freetuxtv</command>
+    </action>
+	</item> 
+	<item label="Ncmpcpp">
     <action name="Execute">
       <command>urxvt -e ncmpcpp</command>
     </action>
@@ -171,9 +175,10 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Ranger">
+
+  <item label="7zip">
     <action name="Execute">
-      <command>urxvt -e ranger</command>
+      <command>7zFM</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

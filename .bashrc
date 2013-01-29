@@ -3,13 +3,18 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-[[ $TERM != screen* ]] && exec tmux -2
+# [[ $- != *i* ]] && return
+# [[ $TERM != screen* ]] && exec tmux -2
 
 # Set prompt
 PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]\n\[\033[0m\]└──► \[\033[0m\]'
+#Powerline-bash
+# function _update_ps1(){
+# 	export PS1="$(~/Files/Scripts/Py/powerline-bash.py)"
+# }
+# export PROMPT_COMMAND="_update_ps1"
 
-#fortune -a | cowsay -f stegosaurus
+#fortune -a | cowsay -f moose
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 # echo -e "\033[1;36m|¯¯¯¯¯¯¯||¯|\¯\'|¯| |¯|  /¯¯/\¯¯\|¯¯¯¯¯¯¯|  |¯ \|¯|/¯/\¯\  /¯/\¯\|¯ \|¯||¯|\¯\ "
 # echo -e "\033[1;35m'¯¯|'|¯¯’|'|/ / |'|_|'|__\  '\'¯¯'¯¯|'|¯¯’  |'|\ '|| ||'|  | ||'||'|\ '|| ’'>_ "
@@ -50,7 +55,7 @@ alias pacRm='pacman -Rcns'
 alias fehview='feh -g 512x384 --zoom fill -. -x'
 alias fehlist='feh -l -r'
 alias rt="rtorrent"
-alias nload="nload -u K -i 2000 -o 2000"
+alias nload="nload -u K -i 4000 -o 4000"
 alias mutt="mutt -F ~/.mutt/.gmail.muttrc"
 alias muttnplx="mutt -F ~/.mutt/.nplx.muttrc"
 alias mounvideo="sudo mount -t cifs -o username=Administrator //192.168.1.100/Videos /mnt/videos"
@@ -59,6 +64,7 @@ alias mounwork="sudo mount -t cifs -o username=Administrator //192.168.1.100/Wor
 alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
 alias sublime="~/Applications/Sublime\ Text\ 2/./sublime_text"
 alias sshcjb="ssh nplx@216.194.70.6 -p 443"
+alias ssharbor="ssh m-net.arbornet.org"
 alias scpcjb="scp://nplx@216.194.70.6/"
 #alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
 alias watchstarwar="telnet towel.blinkenlights.nl"

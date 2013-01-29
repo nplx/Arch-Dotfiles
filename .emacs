@@ -2,31 +2,15 @@
 ;;            My Emacs Config
 ;;==========================================
 ;;
-;;
-;;== Frame size (Somehow very slow)==
-;;(setq default-frame-alist
-;;	'((top . 40) (left . 6)
-;;	  (width . 100) (height . 36)
-;;	  (font . "")
-;;	  ))
-;(setq initial-frame-alist 
-;	  '((width . 72) (height . 36)))
-;;
-;;== User ==
-(setq user-full-name "Charles Gu")
-(setq user-mail-address "nplx@nplx.tk")
-;;
 ;;== EasyPG: GPG support (decrypt in buffer; save encrypted) ==
 (require 'epa-file)
 (epa-file-enable)
 (setq epa-armor t) ; use ASCII armored encryption
 (custom-set-variables '(epa-file-name-regexp "\\.\\(asc\\|gpg\\|gpg~\\|asc~\\)\\'"))
+;;
 ;;== tramp ==
 (require 'tramp)
 (setq tramp-default-method "scp")
-;;
-;;== Cua-mode ==
-;;(cua-mode 1)
 ;;
 ;;== Matching pairs of parentheses ==
 (show-paren-mode t)
@@ -64,13 +48,7 @@
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
-;;(color-theme-comidia)
-;;(color-theme-deep-blue)
-;;(color-theme-clarity)
-;;(color-theme-oswald)
-;;(color-theme-lawrence)
 (color-theme-charcoal-black)
-;;(color-theme-matrix)
 ;;
 ;;== Dispaly time ==
 (display-time-mode t)
@@ -89,9 +67,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/Org/Web_learn_todo.org"
-                            "~/Org/Regular_todo.org"
-                            "~/Org/foobar.org"))
+(setq org-agenda-files (list "~/Org/todo.org"
 ;;
 ;;== ibus-el ==
 (require 'ibus)
@@ -110,29 +86,16 @@
 ;;(setq fill-column 72)
 ;;
 ;;== Font ==
-;(set-default-font "WenQuanYi Zen Hei Mono-12")
 (set-default-font "WenQuanYi Bitmap Song-8")
-;(set-default-font "YaHei Consolas Hybrid-12")
-;(set-frame-font "DejaVu Sans Mono-10")
-;(set-frame-font "Inconsolata-12")
-;;
-;;== Highlight the current line ==
-;;(global-hl-line-mode t)
 ;;
 ;;== ==
 (global-visual-line-mode t)
-;;== Line-by-line scrolling == 
-;(setq scroll-step 1)
-;;
-;;== Enable wheel scrolling == 
-;(mouse-wheel-mode t)
 ;;
 ;;== Hide tool bar ==
 (setq tool-bar-mode)
 ;;
 ;;== Display pictures ==
 (auto-image-file-mode)
-;;
 ;;
 ;;== el-get ==
 ;;
@@ -159,20 +122,3 @@
 (autoload 'w3m-search "w3m-search" "Search words using emacs-w3m." t)
 (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-view-this-url-new-session-in-background t)
-;;== erc ==
-;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/erc/")
-;;(require 'erc)
-;;== mutt ==
-;(server-start)
-;(autoload 'post-mode "post" "mode for e-mail" t)
-;(add-to-list 'auto-mode-alist
-;             '("\\.*mutt-*\\|.article\\|\\.followup"
-;               .post-mode))
-;(add-hook 'post-mode-hook
-;          (lambda()
-;          (auto-fill-mode t)
-;          (setq fill-colum 72)
-;          (require 'footnote-mode)
-;          (footmode-mode t)
-;          (add-to-list 'load-path ;"~/.emacs.d/el-get/boxquote")
-;          (require 'boxquote)))

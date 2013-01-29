@@ -13,14 +13,6 @@
  |--.compton.conf
  |--.ncmpcpp/
             |--config
- |--.muttrc
- |--.mutt/
-         |--gmail
-		 |--nplx
-		 |--gpg.rc
-		 |--.gmail.muttrc
-		 |--.nplx.muttrc
-		 |--color
  |--.mplayer/
             |--config
  |--.config/

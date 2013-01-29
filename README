@@ -12,7 +12,7 @@
  |--.conkyrc
  |--.compton.conf
  |--.ncmpcpp/
-			|--config
+            |--config
  |--.muttrc
  |--.mutt/
          |--gmail
@@ -22,7 +22,7 @@
 		 |--.nplx.muttrc
 		 |--color
  |--.mplayer/
- 			|--config
+            |--config
  |--.config/
            |--openbox/
                      |--autostart
@@ -31,10 +31,10 @@
            |--tint2/
                    |--tint2rc
  scripts/
- 		|--conkyWeatherOutput.py
+        |--conkyWeatherOutput.py
         |--unreadGmailCount.py
-		|--wu.py
-		|--yc.py
+        |--wu.py
+        |--yc.py
         |--newmailnotifier.py
  TTF/
     |--conky_symbols.ttf

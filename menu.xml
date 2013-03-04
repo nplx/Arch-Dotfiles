@@ -25,14 +25,6 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Teamviewer">
-    <action name="Execute">
-      <command>~/Applications/teamviewer7/./teamviewer</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="SpiderOak">
     <action name="Execute">
       <command>SpiderOak</command>
@@ -54,7 +46,7 @@
   </item>
   <item label="Sublime Text 2">
     <action name="Execute">
-      <command>~/Applications/Sublime\ Text\ 2/./sublime_text</command>
+      <command>~/Applications/Sublime_Text_2/./sublime_text</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -87,19 +79,19 @@
 </menu>
 
 <menu id="apps-term-menu" label="Terminals">
-  <item label="urxvt (Alt+Fn)">
+  <item label="urxvt (Alt+F1)">
     <action name="Execute">
       <command>urxvt</command>
     </action>
   </item>
-  <item label="Xterm">
+  <item label="Xterm (Alt+Fn))">
     <action name="Execute">
       <command>xterm</command>
     </action>
   </item>
-  <item label="Terminator (Alt+F1)">
+  <item label="Terminator (Alt+F2)">
     <action name="Execute">
-      <command>terminator</command>
+		<command>terminator --geometry=960x660+30+25</command>
     </action>
   </item>
 </menu>
@@ -120,7 +112,16 @@
         <enabled>yes</enabled>
       </startupnotify>
     </action>
+    </item>
+    <item label="Claws Mail">
+    <action name="Execute">
+      <command>claws-mail</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
   </item>
+
 </menu>
 
 <menu id="apps-office-menu" label="Office">
@@ -145,11 +146,6 @@
       </startupnotify>
     </action>
    </item>
-   <item label="FreeTux TV">
-    <action name="Execute">
-      <command>freetuxtv</command>
-    </action>
-	</item> 
 	<item label="Ncmpcpp">
     <action name="Execute">
       <command>urxvt -e ncmpcpp</command>

@@ -11,6 +11,7 @@
  |--.emacs
  |--.conkyrc
  |--.compton.conf
+ |--.wbar
  |--.ncmpcpp/
             |--config
  |--.mplayer/

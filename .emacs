@@ -2,6 +2,16 @@
 ;;            My Emacs Config
 ;;==========================================
 ;;
+;(setq initial-frame-alist 
+;	  '((width . 72) (height . 36)))
+;;
+;;== User ==
+(setq user-full-name "nplx")
+(setq user-mail-address "nplx@nplx.tk")
+;;
+;;== Add load path ==
+(add-to-list 'load-path "~/.emacs.d/")
+;;
 ;;== EasyPG: GPG support (decrypt in buffer; save encrypted) ==
 (require 'epa-file)
 (epa-file-enable)
@@ -13,15 +23,16 @@
 (setq tramp-default-method "scp")
 ;;
 ;;== Matching pairs of parentheses ==
-(show-paren-mode t)
-(setq show-paren-style 'parentheses)
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+(setq show-paren-style 'mixed)
 ;;
 ;;== Use "Shift+Space" to "Mark" ==
 (global-unset-key (kbd "C-SPC"))
 (global-set-key (kbd "M-SPC") 'set-mark-command)
 ;; 
 ;;== No backup file ==
-;;(setq make-backup-files nil)
+(setq make-backup-files nil)
 ;;
 ;;== Set directory of backup files ==
 (custom-set-variables
@@ -30,13 +41,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ibus-python-shell-command-name "python2")
- '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+; '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
+; '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(column-number-mode t)
  '(tool-bar-mode nil))
-;;
-;;== Add load path ==
-(add-to-list 'load-path "~/.emacs.d/")
 ;;
 ;;== Auto-complete ==
 (add-to-list 'load-path "/usr/share/emacs/site-lisp")
@@ -67,7 +75,6 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/Org/todo.org"
 ;;
 ;;== ibus-el ==
 (require 'ibus)
@@ -86,10 +93,22 @@
 ;;(setq fill-column 72)
 ;;
 ;;== Font ==
-(set-default-font "WenQuanYi Bitmap Song-8")
+;(set-default-font "WenQuanYi Zen Hei Mono-12")
+;(set-default-font "WenQuanYi Bitmap Song-8")
+(set-default-font "YaHei Consolas Hybrid-10")
+;(set-frame-font "DejaVu Sans Mono-10")
+;(set-frame-font "Inconsolata-12")
 ;;
-;;== ==
+;;== Highlight the current line ==
+;;(global-hl-line-mode t)
+;;
+;;== Global visual line==
 (global-visual-line-mode t)
+;;== Line-by-line scrolling == 
+;(setq scroll-step 1)
+;;
+;;== Enable wheel scrolling == 
+;(mouse-wheel-mode t)
 ;;
 ;;== Hide tool bar ==
 (setq tool-bar-mode)
@@ -97,19 +116,24 @@
 ;;== Display pictures ==
 (auto-image-file-mode)
 ;;
+;;
 ;;== el-get ==
 ;;
 (add-to-list 'load-path "~/.emacs.d/el-get")
 
-(unless (require 'el-get nil t)
-  (url-retrieve
-   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-   (lambda (s)
-     (let (el-get-master-branch)
-       (goto-char (point-max))
-       (eval-print-last-sexp)))))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+    (goto-char (point-max))
+    (eval-print-last-sexp))))
 
 (el-get 'sync)
+;;
+;;== autopair ==
+(require 'autopair)
+(autopair-global-mode)
+;;
 ;;== Emacs-w3m ==
 (require 'w3m-load)
 (setq w3m-use-favicon nil)

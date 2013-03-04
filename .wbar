@@ -1,0 +1,104 @@
+i: /usr/share/pixmaps/wbar/dock.png
+c: wbar --bpress --above-desk --nofont --pos bottom --offset 20 --isize 24 --idist 5 --nanim 4 --zoomf 1.800000 --fc 0xffababab
+t: /10
+
+i: /home/nplx/.icons/Faenza/places/96/archlinux-logo.png
+c: dwb https://archlinux.org
+t: Archlinux.org
+
+i: /home/nplx/.icons/Faenza/categories/96/applications-webbrowsers.png
+c: dwb > /dev/null 2>&1 &
+t: dwb
+
+i: /home/nplx/.icons/Faenza/apps/96/terminal.png
+c: urxvt > /dev/null 2>&1 &
+t: urxvt
+
+i: /home/nplx/.icons/Faenza/apps/96/iceweasel.png
+c: /home/nplx/Applications/Icecat-17.0.1/./icecat > /dev/null 2>&1 &
+t: Icecat
+
+i: /home/nplx/.icons/Faenza/apps/96/emacs.png
+c: emacs > /dev/null 2>&1 &
+t: Emacs
+
+i: /home/nplx/.icons/Faenza/apps/96/gvim.png
+c: gvim > /dev/null 2>&1 &
+t: Vim
+
+i: /home/nplx/.icons/Faenza/apps/96/claws-mail.png
+c: claws-mail > /dev/null 2>&1 &
+t: Claws-mail
+
+i: /home/nplx/.icons/Faenza/apps/96/eclipse.png
+c: eclipse > /dev/null 2>&1 &
+t: Eclipse
+
+i: /home/nplx/Applications/Sublime_Text_2/Icon/128x128/sublime_text.png
+c: /home/nplx/Applications/Sublime_Text_2/./sublime_text > /dev/null 2>&1 &
+t: Sublime Text 2
+
+i: /home/nplx/.icons/Faenza/apps/96/thunar.png
+c: thunar > /dev/null 2>&1 &
+t: Thunar
+
+i: /home/nplx/.icons/Faenza/apps/96/AdobeReader8.png
+c: /home/nplx/Applications/AdobeReader/Adobe/Reader8/bin/./acroread > /dev/null 2>&1 &
+t: Adobe Reader
+
+i: /usr/share/pixmaps/dropbox.png
+c: /usr/bin/dropboxd > /dev/null 2>&1 &
+t: Dropbox
+
+i: /usr/share/pixmaps/amule.xpm
+c: amule > /dev/null 2>&1 &
+t: aMule
+
+i: /home/nplx/.icons/Faenza/apps/96/transmission.png
+c: /usr/bin/transmission-gtk > /dev/null 2>&1 &
+t: Transmission
+
+i: /home/nplx/.icons/Faenza/apps/96/text-editor.png
+c: /usr/bin/gedit > /dev/null 2>&1 &
+t: Gedit
+
+i: /home/nplx/.icons/Faenza/apps/96/wireshark.png
+c: /usr/bin/wireshark > /dev/null 2>&1 &
+t: Wireshark
+
+i: /home/nplx/.icons/Faenza/apps/96/abiword.png
+c: /usr/bin/abiword > /dev/null 2>&1 &
+t: Abiword
+
+i: /home/nplx/.icons/Faenza/apps/96/xterm-color_48x48.png
+c: /usr/bin/xterm > /dev/null 2>&1 &
+t: xterm
+
+i: /usr/share/pixmaps/spideroak.png
+c: /usr/bin/SpiderOak > /dev/null 2>&1 &
+t: SpiderOak
+
+i: /home/nplx/.icons/Faenza/apps/96/terminator.png
+c: /usr/bin/terminator > /dev/null 2>&1 &
+t: Terminator
+
+i: /usr/share/pixmaps/mirage.png
+c: /usr/bin/mirage > /dev/null 2>&1 &
+t: Mirage
+
+i: /home/nplx/.icons/Faenza/apps/96/filezilla.png
+c: /usr/bin/filezilla > /dev/null 2>&1 &
+t: Filezilla
+
+i: /usr/share/icons/hicolor/128x128/apps/vlc.png
+c: /usr/bin/vlc > /dev/null 2>&1 &
+t: VLC
+
+i: /usr/share/gitg/icons/gitg128x128.png
+c: /usr/bin/gitg > /dev/null 2>&1 &
+t: Gitg
+
+i: /home/nplx/.icons/Faenza/mimetypes/96/application-7zip.png
+c: /usr/bin/7zFM > /dev/null 2>&1 &
+t: 7-zip
+

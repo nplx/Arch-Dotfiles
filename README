@@ -1,35 +1,32 @@
-# README
-#
-# This repository contains dotfiles of my Archlinux configs.
+arch_dotfiles/
+├── .Xdefaults
+├── .bashrc
+├── .compton.conf
+├── .conkyrc
+├── .emacs
+├── .gitignore
+├── .gvimrc
+├── .mplayer
+│   └── config
+├── .ncmpcpp
+│   └── config
+├── .tmux.conf
+├── .vimrc
+├── .wbar
+├── .xinitrc
+├── README
+├── TTF
+│   ├── ConkyWeather.ttf
+│   ├── conky_symbols.ttf
+│   └── weather.ttf
+├── autostart
+├── menu.xml
+├── rc.xml
+├── scripts
+│   ├── conkyWeatherOutput.py
+│   ├── newmailnotifier.py
+│   ├── wu.py
+│   └── yc.py
+└── tint2rc
 
-# File Structure
-~/ 
- |--.bashrc
- |--.Xdefaults
- |--.vimrc
- |--.gvimrc
- |--.emacs
- |--.conkyrc
- |--.compton.conf
- |--.wbar
- |--.ncmpcpp/
-            |--config
- |--.mplayer/
-            |--config
- |--.config/
-           |--openbox/
-                     |--autostart
-                     |--menu.xml
-                     |--rc.xml
-           |--tint2/
-                   |--tint2rc
- scripts/
-        |--conkyWeatherOutput.py
-        |--unreadGmailCount.py
-        |--wu.py
-        |--yc.py
-        |--newmailnotifier.py
- TTF/
-    |--conky_symbols.ttf
-    |--weather.ttf
-    |--ConkyWeather.ttf 
+4 directories, 25 files

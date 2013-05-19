@@ -4,7 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-# [[ $TERM != screen* ]] && exec tmux -2
+[[ $TERM != screen* ]] && exec tmux -2
 
 # Set prompt
 #PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]\n\[\033[0m\]└──► \[\033[0m\]'
@@ -14,7 +14,7 @@
 #}
 #export PROMPT_COMMAND="_update_ps1"
 
-#fortune -a | cowsay -f moose
+fortune -a | cowsay -f moose
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 # echo -e "\033[1;36m|¯¯¯¯¯¯¯||¯|\¯\'|¯| |¯|  /¯¯/\¯¯\|¯¯¯¯¯¯¯|  |¯ \|¯|/¯/\¯\  /¯/\¯\|¯ \|¯||¯|\¯\ "
 # echo -e "\033[1;35m'¯¯|'|¯¯’|'|/ / |'|_|'|__\  '\'¯¯'¯¯|'|¯¯’  |'|\ '|| ||'|  | ||'||'|\ '|| ’'>_ "
@@ -28,7 +28,7 @@ export TERM="xterm-256color"
 # Include ibus/fcitx input module
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=ibus
 # gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -44,17 +44,17 @@ alias cp='acp -g'
 alias mv='amv -g'
 alias rm='rm -v'
 alias mkdir='mkdir -p -v'
-alias df='df -h'
+alias df='df -h -T'
 alias du='du -h -c'
 alias grep='grep --color=auto'
-alias ps?='ps aux | grep'
+alias ps?='ps auxf | grep -v grep | grep -i'
 alias reload='source ~/.bashrc'
 alias close='killall screen'
 alias shred='shred -vfz -n 30'
 alias pacOrph='pacman -Qtdq'
 alias pacrm='pacman -Rns'
 alias pacRm='pacman -Rcns'
-alias fehview='feh -g 512x384 --zoom fill -. -x'
+alias fehview='feh --zoom fill -. -x'
 alias fehlist='feh -l -r'
 alias rt="rtorrent"
 alias nload="nload -u K -i 4000 -o 4000"
@@ -71,10 +71,14 @@ alias scpcjb="scp://nplx@216.194.70.6/"
 #alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
 alias watchstarwar="telnet towel.blinkenlights.nl"
 alias youtubestream="~/Files/Scripts/Shell/./youtubestream.sh"
+alias dict="ydcv -f --color auto"
 #alias yt3="youtube-viewer -3"
 alias mplayer="mplayer -osdlevel 3 -framedrop "
 alias wallproxy="python2 ~/Applications/WallProxy/startup.py > /dev/null 2>&1 &"
 alias goagent="python2 ~/Applications/GoAgent/proxy.py > /dev/null 2>&1 &"
+alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
+alias unread="python ~/Files/Scripts/Py/unreadGmailCount.py > /dev/null &"
+alias btsync="~/Applications/./btsync > /dev/null 2>&1 &"
 alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.list & pacman -Qqm > ~/.yaourt_backup.list'
 
 ## Functions ##
@@ -96,7 +100,7 @@ function wakeupneo(){
 # Public IP check
 function pubip_check(){
 	#PUBIP=$(curl -s ifconfig.me)
-    PUBIP=$(curl -s ipchicken.com | awk 'NR==35 {print $1}')
+    PUBIP=$(curl -s ipchicken.com | awk 'NR==36 {print $1}')
 	echo -e "Your Public IP is:\033[1;34m[\033[1;37m$PUBIP\033[1;34m]"
 }
 #
@@ -106,7 +110,7 @@ function proxyon(){
     export https_proxy="http://127.0.0.1:8087/"
     export ftp_proxy="http://127.0.0.1:8087/"
 #    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-	PUBIP=$(curl -s ipchicken.com | awk 'NR==35 {print $1}')
+	PUBIP=$(curl -s ipchicken.com | awk 'NR==36 {print $1}')
     echo -e "Proxy is on.\nYour public IP is:\033[1;32m$PUBIP\n\033[0mHave fun!"
 }
 function proxyoff(){
@@ -117,7 +121,7 @@ function proxyoff(){
     unset FTP_PROXY
     unset ftp_proxy
     #	PUBIP=$(curl -s ip.nu | awk '/[0-9]/ {print $5}')
-    PUBIP=$(curl -s ipchicken.com | awk 'NR==35 {print $1}')
+    PUBIP=$(curl -s ipchicken.com | awk 'NR==36 {print $1}')
 	echo -e "Proxy is off.\nYour public IP is:\033[1;31m$PUBIP\n\033[0mYou're on your own now."
 }
 #

@@ -18,13 +18,17 @@ i: /home/nplx/.icons/Faenza/apps/96/iceweasel.png
 c: /home/nplx/Applications/Icecat-17.0.1/./icecat > /dev/null 2>&1 &
 t: Icecat
 
+i: /home/nplx/.icons/Faenza/apps/96/gvim.png
+c: gvim > /dev/null 2>&1 &
+t: Vim
+
 i: /home/nplx/.icons/Faenza/apps/96/emacs.png
 c: emacs > /dev/null 2>&1 &
 t: Emacs
 
-i: /home/nplx/.icons/Faenza/apps/96/gvim.png
-c: gvim > /dev/null 2>&1 &
-t: Vim
+i: /home/nplx/.icons/Faenza/apps/96/xpad.png
+c: xpad > /dev/null 2>&1 &
+t: XPad
 
 i: /home/nplx/.icons/Faenza/apps/96/claws-mail.png
 c: claws-mail > /dev/null 2>&1 &
@@ -46,11 +50,11 @@ i: /home/nplx/.icons/Faenza/apps/96/AdobeReader8.png
 c: /home/nplx/Applications/AdobeReader/Adobe/Reader8/bin/./acroread > /dev/null 2>&1 &
 t: Adobe Reader
 
-i: /usr/share/pixmaps/dropbox.png
+i: /home/nplx/.icons/Faenza/apps/96/dropbox.png
 c: /usr/bin/dropboxd > /dev/null 2>&1 &
 t: Dropbox
 
-i: /usr/share/pixmaps/amule.xpm
+i: /home/nplx/.icons/Faenza/apps/96/amule.png
 c: amule > /dev/null 2>&1 &
 t: aMule
 
@@ -62,10 +66,6 @@ i: /home/nplx/.icons/Faenza/apps/96/text-editor.png
 c: /usr/bin/gedit > /dev/null 2>&1 &
 t: Gedit
 
-i: /home/nplx/.icons/Faenza/apps/96/wireshark.png
-c: /usr/bin/wireshark > /dev/null 2>&1 &
-t: Wireshark
-
 i: /home/nplx/.icons/Faenza/apps/96/abiword.png
 c: /usr/bin/abiword > /dev/null 2>&1 &
 t: Abiword
@@ -74,15 +74,15 @@ i: /home/nplx/.icons/Faenza/apps/96/xterm-color_48x48.png
 c: /usr/bin/xterm > /dev/null 2>&1 &
 t: xterm
 
-i: /usr/share/pixmaps/spideroak.png
+i: /home/nplx/.icons/Faenza/apps/96/spideroak.png
 c: /usr/bin/SpiderOak > /dev/null 2>&1 &
 t: SpiderOak
 
 i: /home/nplx/.icons/Faenza/apps/96/terminator.png
-c: /usr/bin/terminator > /dev/null 2>&1 &
+c: /usr/bin/terminator --geometry=960x660+30+25 > /dev/null 2>&1 &
 t: Terminator
 
-i: /usr/share/pixmaps/mirage.png
+i: /home/nplx/.icons/Faenza/apps/96/mirage.png
 c: /usr/bin/mirage > /dev/null 2>&1 &
 t: Mirage
 
@@ -90,7 +90,7 @@ i: /home/nplx/.icons/Faenza/apps/96/filezilla.png
 c: /usr/bin/filezilla > /dev/null 2>&1 &
 t: Filezilla
 
-i: /usr/share/icons/hicolor/128x128/apps/vlc.png
+i: /home/nplx/.icons/Faenza/apps/96/vlc.png
 c: /usr/bin/vlc > /dev/null 2>&1 &
 t: VLC
 

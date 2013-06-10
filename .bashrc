@@ -22,7 +22,7 @@ fortune -a | cowsay -f moose
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
 
 # Set xterm transparent
-[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .75 >/dev/null
+[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .7 >/dev/null
 # Set xterm 256 color
 export TERM="xterm-256color"
 # Include ibus/fcitx input module
@@ -63,6 +63,7 @@ alias muttnplx="mutt -F ~/.mutt/.nplx.muttrc"
 alias mounvideo="sudo mount -t cifs -o username=Administrator //192.168.1.100/Videos /mnt/videos"
 alias mounmusic="sudo mount -t cifs -o username=Administrator //192.168.1.100/Music /mnt/music"
 alias mounwork="sudo mount -t cifs -o username=Administrator //192.168.1.100/Workspace /mnt/work"
+alias mounapp="sudo mount -t cifs -o username=Administrator //192.168.1.100/AndroidStudioProjects /mnt/AndroidStudioProjects"
 alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
 alias sublime="~/Applications/Sublime\ Text\ 2/./sublime_text"
 alias sshcjb="ssh nplx@216.194.70.6 -p 443"
@@ -70,10 +71,11 @@ alias ssharbor="ssh m-net.arbornet.org"
 alias scpcjb="scp://nplx@216.194.70.6/"
 #alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
 alias watchstarwar="telnet towel.blinkenlights.nl"
-alias youtubestream="~/Files/Scripts/Shell/./youtubestream.sh"
+alias youtubestream="~/Files/Scripts/Bash/./youtubestream.sh"
 alias dict="ydcv -f --color auto"
+alias sdict="sdcv --data-dir"
 #alias yt3="youtube-viewer -3"
-alias mplayer="mplayer -osdlevel 3 -framedrop "
+alias mplayer="mplayer -af volume=20:1 -osdlevel 3 -framedrop "
 alias wallproxy="python2 ~/Applications/WallProxy/startup.py > /dev/null 2>&1 &"
 alias goagent="python2 ~/Applications/GoAgent/proxy.py > /dev/null 2>&1 &"
 alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
@@ -86,10 +88,10 @@ alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.l
 # Wakeup Neo
 function wakeupneo(){
 	clear
-	echo -e "\033[1;32mWake up, Neo." | pv -qL 6
+	echo -e "\033[1;32mWake up, Neo." | pv -qL 4
 	sleep 5
 	clear
-	echo -e "\033[1;32mThe Matrix has you..." | pv -qL 6
+	echo -e "\033[1;32mThe Matrix has you..." | pv -qL 5
 	sleep 5
 	clear
 	echo -e "\033[1;32mFollow the white rabbit." | pv -qL 6

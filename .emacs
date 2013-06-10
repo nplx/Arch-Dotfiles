@@ -6,8 +6,8 @@
 ;	  '((width . 72) (height . 36)))
 ;;
 ;;== User ==
-(setq user-full-name "nplx")
-(setq user-mail-address "nplx@nplx.tk")
+;(setq user-full-name "nplx")
+;(setq user-mail-address "nplx@nplx.tk")
 ;;
 ;;== Add load path ==
 (add-to-list 'load-path "~/.emacs.d/")
@@ -17,6 +17,7 @@
 (epa-file-enable)
 (setq epa-armor t) ; use ASCII armored encryption
 (custom-set-variables '(epa-file-name-regexp "\\.\\(asc\\|gpg\\|gpg~\\|asc~\\)\\'"))
+(custom-set-variables '(ibus-python-shell-command-name "python2"))
 ;;
 ;;== tramp ==
 (require 'tramp)
@@ -56,7 +57,9 @@
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
-(color-theme-charcoal-black)
+;;(color-theme-lawrence)
+;;(color-theme-euphoria)
+(color-theme-deep-blue)
 ;;
 ;;== Dispaly time ==
 (display-time-mode t)
@@ -66,20 +69,12 @@
 (setq-default tab-width 4)
 ;;(ido-mode t)
 ;;
-;;== LaTex ==
-;;
-;;
 ;;== Org mode ==
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-;;
-;;== ibus-el ==
-(require 'ibus)
-(add-hook 'after-init-hook 'ibus-mode-on)
-(setq ibus-agent-file-name "/usr/share/emacs/site-lisp/ibus/ibus-el-agent")
 ;;
 ;;== Enable column number ==
 (column-number-mode t)
@@ -93,9 +88,9 @@
 ;;(setq fill-column 72)
 ;;
 ;;== Font ==
+(set-default-font "Envy Code R for Powerline-10")
 ;(set-default-font "WenQuanYi Zen Hei Mono-12")
-;(set-default-font "WenQuanYi Bitmap Song-8")
-(set-default-font "YaHei Consolas Hybrid-10")
+;(set-default-font "YaHei Consolas Hybrid-10")
 ;(set-frame-font "DejaVu Sans Mono-10")
 ;(set-frame-font "Inconsolata-12")
 ;;
@@ -119,20 +114,31 @@
 ;;
 ;;== el-get ==
 ;;
-(add-to-list 'load-path "~/.emacs.d/el-get")
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-    (goto-char (point-max))
-    (eval-print-last-sexp))))
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
 
 (el-get 'sync)
+;;
+;;== ibus-el ==
+(require 'ibus)
+(add-hook 'after-init-hook 'ibus-mode-on)
+;;(global-set-key (kbd "C-\\" 'ibus-toggle))
+(setq ibus-agent-file-name "/usr/share/emacs/site-lisp/ibus/ibus-el-agent")
+;;(setq ibus-agent-file-name "~/.emacs.d/el-get/ibus/ibus-el-agent")
 ;;
 ;;== autopair ==
 (require 'autopair)
 (autopair-global-mode)
+;;
+;;== YASnippet ==
+(require 'yasnippet)
 ;;
 ;;== Emacs-w3m ==
 (require 'w3m-load)

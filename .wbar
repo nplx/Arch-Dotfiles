@@ -6,11 +6,11 @@ i: /home/nplx/.icons/Faenza/places/96/archlinux-logo.png
 c: dwb https://archlinux.org
 t: Archlinux.org
 
-i: /home/nplx/.icons/Faenza/categories/96/applications-webbrowsers.png
+i: /home/nplx/.icons/Faience/categories/96/applications-webbrowsers.png
 c: dwb > /dev/null 2>&1 &
 t: dwb
 
-i: /home/nplx/.icons/Faenza/apps/96/terminal.png
+i: /home/nplx/.icons/Faience/apps/96/terminal.png
 c: urxvt > /dev/null 2>&1 &
 t: urxvt
 
@@ -26,11 +26,15 @@ i: /home/nplx/.icons/Faenza/apps/96/emacs.png
 c: emacs > /dev/null 2>&1 &
 t: Emacs
 
-i: /home/nplx/.icons/Faenza/apps/96/xpad.png
+i: /home/nplx/.icons/Faenza/apps/96/deadbeef.png
+c: deadbeef > /dev/null 2>&1 &
+t: Deadbeef
+
+i: /home/nplx/.icons/Faience/apps/96/xpad.png
 c: xpad > /dev/null 2>&1 &
 t: XPad
 
-i: /home/nplx/.icons/Faenza/apps/96/claws-mail.png
+i: /home/nplx/.icons/Faience/apps/96/claws-mail.png
 c: claws-mail > /dev/null 2>&1 &
 t: Claws-mail
 
@@ -38,7 +42,7 @@ i: /home/nplx/.icons/Faenza/apps/96/eclipse.png
 c: eclipse > /dev/null 2>&1 &
 t: Eclipse
 
-i: /home/nplx/Applications/Sublime_Text_2/Icon/128x128/sublime_text.png
+i: /home/nplx/.icons/Faenza/apps/96/sublime-text-2.png
 c: /home/nplx/Applications/Sublime_Text_2/./sublime_text > /dev/null 2>&1 &
 t: Sublime Text 2
 
@@ -50,7 +54,7 @@ i: /home/nplx/.icons/Faenza/apps/96/AdobeReader8.png
 c: /home/nplx/Applications/AdobeReader/Adobe/Reader8/bin/./acroread > /dev/null 2>&1 &
 t: Adobe Reader
 
-i: /home/nplx/.icons/Faenza/apps/96/dropbox.png
+i: /home/nplx/.icons/Faience/apps/96/dropbox.png
 c: /usr/bin/dropboxd > /dev/null 2>&1 &
 t: Dropbox
 
@@ -58,19 +62,19 @@ i: /home/nplx/.icons/Faenza/apps/96/amule.png
 c: amule > /dev/null 2>&1 &
 t: aMule
 
-i: /home/nplx/.icons/Faenza/apps/96/transmission.png
+i: /home/nplx/.icons/Faience/apps/96/transmission.png
 c: /usr/bin/transmission-gtk > /dev/null 2>&1 &
 t: Transmission
-
-i: /home/nplx/.icons/Faenza/apps/96/text-editor.png
-c: /usr/bin/gedit > /dev/null 2>&1 &
-t: Gedit
 
 i: /home/nplx/.icons/Faenza/apps/96/abiword.png
 c: /usr/bin/abiword > /dev/null 2>&1 &
 t: Abiword
 
-i: /home/nplx/.icons/Faenza/apps/96/xterm-color_48x48.png
+i: /home/nplx/.icons/Faience/apps/96/calc.png
+c: /usr/bin/galculator > /dev/null 2>&1 &
+t: Galculator
+
+i: /home/nplx/.icons/Faience/apps/96/xterm.png
 c: /usr/bin/xterm > /dev/null 2>&1 &
 t: xterm
 
@@ -78,7 +82,7 @@ i: /home/nplx/.icons/Faenza/apps/96/spideroak.png
 c: /usr/bin/SpiderOak > /dev/null 2>&1 &
 t: SpiderOak
 
-i: /home/nplx/.icons/Faenza/apps/96/terminator.png
+i: /home/nplx/.icons/Faience/apps/96/terminator.png
 c: /usr/bin/terminator --geometry=960x660+30+25 > /dev/null 2>&1 &
 t: Terminator
 
@@ -90,15 +94,11 @@ i: /home/nplx/.icons/Faenza/apps/96/filezilla.png
 c: /usr/bin/filezilla > /dev/null 2>&1 &
 t: Filezilla
 
-i: /home/nplx/.icons/Faenza/apps/96/vlc.png
+i: /home/nplx/.icons/Faience/apps/96/vlc.png
 c: /usr/bin/vlc > /dev/null 2>&1 &
 t: VLC
 
-i: /usr/share/gitg/icons/gitg128x128.png
-c: /usr/bin/gitg > /dev/null 2>&1 &
-t: Gitg
-
-i: /home/nplx/.icons/Faenza/mimetypes/96/application-7zip.png
+i: /home/nplx/.icons/Faience/mimetypes/96/application-7zip.png
 c: /usr/bin/7zFM > /dev/null 2>&1 &
 t: 7-zip
 

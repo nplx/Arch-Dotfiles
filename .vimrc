@@ -1,15 +1,17 @@
 set nocompatible
 set hidden
 set autoindent
-set smartindent
+" set smartindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set ignorecase  " ignore case when searching
+" set ignorecase  " ignore case when searching
 syntax on
-colorscheme molokai
+" colorscheme molokai
+" colorscheme dw_green
+colorscheme ekvoli
 call pathogen#infect()
 filetype plugin indent on
 set guioptions-=T
-set expandtab
+" set expandtab
 set number
 set tabstop=4
 set shiftwidth=4
@@ -23,7 +25,7 @@ set laststatus=2
 set guifont=YaHei\ Consolas\ Hybrid\ 10
 let g:Powerline_symbols ='fancy'
 set t_Co=256
-au BufRead /tmp/mutt-* set tw=72
+au BufRead /tmp/mutt-* set tw=70
 set wildmenu
 set wildmode=list:longest,full
 set mouse=a

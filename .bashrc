@@ -60,16 +60,13 @@ alias rt="rtorrent"
 alias nload="nload -u K -i 4000 -o 4000"
 alias mutt="mutt -F ~/.mutt/.gmail.muttrc"
 alias muttnplx="mutt -F ~/.mutt/.nplx.muttrc"
-alias mounvideo="sudo mount -t cifs -o username=Administrator //192.168.1.100/Videos /mnt/videos"
-alias mounmusic="sudo mount -t cifs -o username=Administrator //192.168.1.100/Music /mnt/music"
-alias mounwork="sudo mount -t cifs -o username=Administrator //192.168.1.100/Workspace /mnt/work"
-alias mounapp="sudo mount -t cifs -o username=Administrator //192.168.1.100/AndroidStudioProjects /mnt/AndroidStudioProjects"
+alias mounvideo="sudo mount -t cifs -o username=nplx //192.168.1.100/TV\ Programmes /mnt/videos"
+alias mounmusic="sudo mount -t cifs -o username=nplx //192.168.1.100/Music /mnt/music"
+alias mounwork="sudo mount -t cifs -o username=nplx //192.168.1.100/Workspace /mnt/work"
+alias mounapp="sudo mount -t cifs -o username=nplx //192.168.1.100/AndroidStudioProjects /mnt/AndroidStudioProjects"
 alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
 alias sublime="~/Applications/Sublime\ Text\ 2/./sublime_text"
-alias sshcjb="ssh nplx@216.194.70.6 -p 443"
-alias ssharbor="ssh m-net.arbornet.org"
-alias scpcjb="scp://nplx@216.194.70.6/"
-#alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
+alias aria="aria2c --enable-rpc --rpc-listen-all > /dev/null 2>&1 &"
 alias watchstarwar="telnet towel.blinkenlights.nl"
 alias youtubestream="~/Files/Scripts/Bash/./youtubestream.sh"
 alias dict="ydcv -f --color auto"
@@ -82,6 +79,7 @@ alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
 alias unread="python ~/Files/Scripts/Py/unreadGmailCount.py > /dev/null &"
 alias btsync="~/Applications/./btsync > /dev/null 2>&1 &"
 alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.list & pacman -Qqm > ~/.yaourt_backup.list'
+alias heroku="~/Applications/heroku-client/bin/./heroku"
 
 ## Functions ##
 #
@@ -157,3 +155,5 @@ function _prompt_command(){
     PS1='\[\033[0m\]┌──[\[\033[1;34m\]\u\[\033[1;33m\]@\[\033[1;34m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]'"`_git_prompt`"'\n\[\033[0m\]└──► \[\033[0m\]'
 }
 PROMPT_COMMAND=_prompt_command
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

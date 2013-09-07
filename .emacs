@@ -140,6 +140,13 @@
 ;;== YASnippet ==
 (require 'yasnippet)
 ;;
+;;== Markdown-mode ==
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;;
 ;;== Emacs-w3m ==
 (require 'w3m-load)
 (setq w3m-use-favicon nil)

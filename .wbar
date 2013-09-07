@@ -1,5 +1,5 @@
 i: /usr/share/pixmaps/wbar/dock.png
-c: wbar --bpress --above-desk --nofont --pos bottom --offset 20 --isize 24 --idist 5 --nanim 4 --zoomf 1.800000 --fc 0xffababab
+c: wbar --bpress --above-desk --nofont --pos bottom --offset 20 --isize 24 --idist 5 --nanim 3 --zoomf 1.400000 --jumpf 0.500000
 t: /10
 
 i: /home/nplx/.icons/Faenza/places/96/archlinux-logo.png
@@ -9,6 +9,10 @@ t: Archlinux.org
 i: /home/nplx/.icons/Faience/categories/96/applications-webbrowsers.png
 c: dwb > /dev/null 2>&1 &
 t: dwb
+
+i: /home/nplx/.icons/Faience/apps/96/midori.png
+c: midori > /dev/null 2>&1 &
+t: Midori
 
 i: /home/nplx/.icons/Faience/apps/96/terminal.png
 c: urxvt > /dev/null 2>&1 &
@@ -38,20 +42,16 @@ i: /home/nplx/.icons/Faience/apps/96/claws-mail.png
 c: claws-mail > /dev/null 2>&1 &
 t: Claws-mail
 
-i: /home/nplx/.icons/Faenza/apps/96/eclipse.png
-c: eclipse > /dev/null 2>&1 &
-t: Eclipse
-
 i: /home/nplx/.icons/Faenza/apps/96/sublime-text-2.png
-c: /home/nplx/Applications/Sublime_Text_2/./sublime_text > /dev/null 2>&1 &
-t: Sublime Text 2
+c: /home/nplx/Applications/sublime_text_3/./sublime_text > /dev/null 2>&1 &
+t: Sublime Text 3
 
 i: /home/nplx/.icons/Faenza/apps/96/thunar.png
 c: thunar > /dev/null 2>&1 &
 t: Thunar
 
 i: /home/nplx/.icons/Faenza/apps/96/AdobeReader8.png
-c: /home/nplx/Applications/AdobeReader/Adobe/Reader8/bin/./acroread > /dev/null 2>&1 &
+c: /home/nplx/Applications/Adobe/Reader9/bin/./acroread > /dev/null 2>&1 &
 t: Adobe Reader
 
 i: /home/nplx/.icons/Faience/apps/96/dropbox.png
@@ -65,6 +65,10 @@ t: aMule
 i: /home/nplx/.icons/Faience/apps/96/transmission.png
 c: /usr/bin/transmission-gtk > /dev/null 2>&1 &
 t: Transmission
+
+i: /home/nplx/.icons/Faience/apps/96/libreoffice-main.png
+c: /usr/bin/libreoffice > /dev/null 2>&1 &
+t: Libreoffice-writer
 
 i: /home/nplx/.icons/Faenza/apps/96/abiword.png
 c: /usr/bin/abiword > /dev/null 2>&1 &
@@ -82,10 +86,6 @@ i: /home/nplx/.icons/Faenza/apps/96/spideroak.png
 c: /usr/bin/SpiderOak > /dev/null 2>&1 &
 t: SpiderOak
 
-i: /home/nplx/.icons/Faience/apps/96/terminator.png
-c: /usr/bin/terminator --geometry=960x660+30+25 > /dev/null 2>&1 &
-t: Terminator
-
 i: /home/nplx/.icons/Faenza/apps/96/mirage.png
 c: /usr/bin/mirage > /dev/null 2>&1 &
 t: Mirage
@@ -93,10 +93,6 @@ t: Mirage
 i: /home/nplx/.icons/Faenza/apps/96/filezilla.png
 c: /usr/bin/filezilla > /dev/null 2>&1 &
 t: Filezilla
-
-i: /home/nplx/.icons/Faience/apps/96/vlc.png
-c: /usr/bin/vlc > /dev/null 2>&1 &
-t: VLC
 
 i: /home/nplx/.icons/Faience/mimetypes/96/application-7zip.png
 c: /usr/bin/7zFM > /dev/null 2>&1 &

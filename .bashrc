@@ -29,6 +29,7 @@ export TERM="xterm-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export GTK_IM_MODULE=ibus
+ibus-daemon -drx
 # gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -65,13 +66,17 @@ alias mounmusic="sudo mount -t cifs -o username=nplx //192.168.1.100/Music /mnt/
 alias mounwork="sudo mount -t cifs -o username=nplx //192.168.1.100/Workspace /mnt/work"
 alias mounapp="sudo mount -t cifs -o username=nplx //192.168.1.100/AndroidStudioProjects /mnt/AndroidStudioProjects"
 alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
-alias sublime="~/Applications/Sublime\ Text\ 2/./sublime_text"
+alias sublime="~/Applications/sublime_text_3/./sublime_text"
+# alias sshcjb="ssh nplx@216.194.70.6 -p 443"
+# alias ssharbor="ssh m-net.arbornet.org"
+# alias scpcjb="scp://nplx@216.194.70.6/"
+# alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
 alias aria="aria2c --enable-rpc --rpc-listen-all > /dev/null 2>&1 &"
 alias watchstarwar="telnet towel.blinkenlights.nl"
 alias youtubestream="~/Files/Scripts/Bash/./youtubestream.sh"
 alias dict="ydcv -f --color auto"
 alias sdict="sdcv --data-dir"
-#alias yt3="youtube-viewer -3"
+# alias yt3="youtube-viewer -3"
 alias mplayer="mplayer -af volume=20:1 -osdlevel 3 -framedrop "
 alias wallproxy="python2 ~/Applications/WallProxy/startup.py > /dev/null 2>&1 &"
 alias goagent="python2 ~/Applications/GoAgent/proxy.py > /dev/null 2>&1 &"

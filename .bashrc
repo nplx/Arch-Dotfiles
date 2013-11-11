@@ -29,7 +29,7 @@ export TERM="xterm-256color"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export GTK_IM_MODULE=ibus
-ibus-daemon -drx
+# ibus-daemon -drx
 # gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -78,8 +78,8 @@ alias dict="ydcv -f --color auto"
 alias sdict="sdcv --data-dir"
 # alias yt3="youtube-viewer -3"
 alias mplayer="mplayer -af volume=20:1 -osdlevel 3 -framedrop "
-alias wallproxy="python2 ~/Applications/WallProxy/startup.py > /dev/null 2>&1 &"
-alias goagent="python2 ~/Applications/GoAgent/proxy.py > /dev/null 2>&1 &"
+alias wallproxy="python2 ~/Applications/WallProxy/local/startup.py > /dev/null 2>&1 &"
+alias goagent="python2 ~/Applications/GoAgent/local/proxy.py > /dev/null 2>&1 &"
 alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
 alias unread="python ~/Files/Scripts/Py/unreadGmailCount.py > /dev/null &"
 alias btsync="~/Applications/./btsync > /dev/null 2>&1 &"
@@ -153,7 +153,7 @@ function _git_prompt(){
         else
             branch="`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`"
         fi
-        echo -e '\[\033[0;37;'"$ansi"';1m\]'"$branch"'\[\033[0;43m'"$git_abbrev_hash"'\[\033[0m\]'
+        echo -e '\[\033[0;37;'"$ansi"';1m\]'"$branch"'\[\033[0;45m'"$git_abbrev_hash"'\[\033[0m\]'
     fi
 }
 function _prompt_command(){

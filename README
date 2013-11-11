@@ -1,11 +1,12 @@
-arch_dotfiles/
+.
 ├── .Xdefaults
+├── .bash_profile
 ├── .bashrc
 ├── .compton.conf
 ├── .conkyrc
 ├── .emacs
-├── .gitignore
 ├── .gvimrc
+├── .mpd.conf
 ├── .mplayer
 │   └── config
 ├── .ncmpcpp
@@ -22,11 +23,6 @@ arch_dotfiles/
 ├── autostart
 ├── menu.xml
 ├── rc.xml
-├── scripts
-│   ├── conkyWeatherOutput.py
-│   ├── newmailnotifier.py
-│   ├── wu.py
-│   └── yc.py
 └── tint2rc
 
-4 directories, 25 files
+3 directories, 22 files

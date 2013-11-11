@@ -5,16 +5,18 @@
 #
 
 # If you want to use GNOME config tools...
-#
-#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
-#  /usr/lib/openbox/gnome-settings-daemon &
-#elif which gnome-settings-daemon >/dev/null 2>&1; then
-#  gnome-settings-daemon &
-#fi
+
+if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+ /usr/lib/openbox/gnome-settings-daemon &
+elif which gnome-settings-daemon >/dev/null 2>&1; then
+ gnome-settings-daemon &
+fi
 
 # If you want to use XFCE config tools...
 #
 #xfce4-power-manager &
+
+ibus-daemon -drx
 
 #Set compmgr
 #(sleep 2s && xcompmgr -cCfF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.5 -m.82) & #With shadow
@@ -30,6 +32,9 @@ transset-df .70 -n Conky &
 #Run Panel
 tint2 &
 
+#XScreensaver
+# xscreensaver &
+
 #Battery
 #batti &
 
@@ -41,11 +46,11 @@ volumeicon &
 
 #Manage clipboard
 # clipit &
-parcellite &
+# parcellite &
 
 #Run gae proxy
-python2 ~/Applications/WallProxy/startup.py &
-#python2 ~/Applications/GoAgent/proxy.py &
+# python2 ~/Applications/WallProxy/local/startup.py &
+python2 ~/Applications/GoAgent/local/proxy.py &
 
 #Run my mail notifier
 python ~/Files/Scripts/Py/newmailnotifier.py &

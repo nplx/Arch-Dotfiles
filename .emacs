@@ -4,6 +4,7 @@
 ;;
 ;(setq initial-frame-alist 
 ;	  '((width . 72) (height . 36)))
+;(setq inhibit-splash-screen t)
 ;;
 ;;== User ==
 ;(setq user-full-name "nplx")
@@ -75,6 +76,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+(setq org-src-fontify-natively t)
 ;;
 ;;== Enable column number ==
 (column-number-mode t)
@@ -88,7 +90,8 @@
 ;;(setq fill-column 72)
 ;;
 ;;== Font ==
-(set-default-font "Envy Code R for Powerline-10")
+;(set-default-font "Envy Code R for Powerline-11")
+(set-default-font "Ubuntu Mono for Powerline-11")
 ;(set-default-font "WenQuanYi Zen Hei Mono-12")
 ;(set-default-font "YaHei Consolas Hybrid-10")
 ;(set-frame-font "DejaVu Sans Mono-10")

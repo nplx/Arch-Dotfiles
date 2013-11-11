@@ -20,7 +20,7 @@
     <focusDelay>200</focusDelay>
     <!-- when followMouse is enabled, the mouse must be inside the window for
        this many milliseconds (1000 = 1 sec) before moving focus to it -->
-    <raiseOnFocus>no</raiseOnFocus>
+    <raiseOnFocus>yes</raiseOnFocus>
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
   </focus>
@@ -154,7 +154,7 @@
      cases. -->
   <margins>
     <top>0</top>
-    <bottom>20</bottom>
+    <bottom>60</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -179,113 +179,113 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>stiler-simple</name>
-        </startupnotify>
-        <command>stiler simple</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-Right">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>stiler-cycle</name>
-        </startupnotify>
-        <command>stiler cycle</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-Up">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>stiler-v</name>
-        </startupnotify>
-        <command>stiler vertical</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>stiler-h</name>
-        </startupnotify>
-        <command>stiler horizontal</command>
-      </action>
-    </keybind>
-    <!--keybind key="C-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Right">
-      <action name="GoToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind-->
-    <keybind key="S-A-Left">
-      <action name="SendToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Right">
-      <action name="SendToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-1">
+    <!-- <keybind key="C-A-Left"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>true</enabled> -->
+    <!--       <name>stiler-simple</name> -->
+    <!--     </startupnotify> -->
+    <!--     <command>stiler simple</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Right"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>true</enabled> -->
+    <!--       <name>stiler-cycle</name> -->
+    <!--     </startupnotify> -->
+    <!--     <command>stiler cycle</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Up"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>true</enabled> -->
+    <!--       <name>stiler-v</name> -->
+    <!--     </startupnotify> -->
+    <!--     <command>stiler vertical</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Down"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <startupnotify> -->
+    <!--       <enabled>true</enabled> -->
+    <!--       <name>stiler-h</name> -->
+    <!--     </startupnotify> -->
+    <!--     <command>stiler horizontal</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Left"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>left</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Right"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>right</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Up"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>up</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Down"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>down</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Left"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>left</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Right"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>right</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Up"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>up</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Down"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>down</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <keybind key="C-A-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="S-A-2">
+    <keybind key="C-A-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="S-A-3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="S-A-4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <keybind key="S-A-d">
-      <action name="ToggleShow"/>
-    </keybind>
+    <!-- <keybind key="S-A-3"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>3</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-4"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>4</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-d"> -->
+    <!--   <action name="ToggleShow"/> -->
+    <!-- </keybind> -->
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -381,7 +381,7 @@
       <action name="Execute">
         <enable>true</enable>
         <name>Terminator</name>
-        <command>terminator --geometry=1000x700+12+34</command>
+        <command>terminator --geometry=960x660+30+25</command>
       </action>
     </keybind>
     <keybind key="F35">
@@ -853,7 +853,7 @@
     <desktop>1</desktop>
     # 1 is the first desktop, 'all' for all desktops
 
-    <layer>normal</layer>
+    <layer>above</layer>
     # 'above', 'normal', or 'below'
 
     <iconic>no</iconic>
@@ -871,7 +871,7 @@
 
     <maximized>true</maximized>
     # 'Horizontal', 'Vertical' or boolean (yes/no)
-  </application>
+    </application>
 
   # end of the example
 

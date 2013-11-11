@@ -44,9 +44,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Sublime Text 2">
+  <item label="Sublime Text">
     <action name="Execute">
-      <command>~/Applications/Sublime_Text_2/./sublime_text</command>
+      <command>~/Applications/sublime_text_3/./sublime_text</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -55,14 +55,6 @@
   <item label="Vim">
     <action name="Execute">
       <command>gvim</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Gedit">
-    <action name="Execute">
-      <command>gedit</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -125,9 +117,19 @@
 </menu>
 
 <menu id="apps-office-menu" label="Office">
+  <item label="Libreoffice">
+    <action name="Execute">
+      <command>libreoffice</command>
+    </action>
+  </item>
   <item label="Calculator">
     <action name="Execute">
       <command>galculator</command>
+    </action>
+  </item>
+  <item label="PDF Reader">
+    <action name="Execute">
+		<command>~/Applications/Adobe/Reader9/bin/./acroread</command>
     </action>
   </item>
   <item label="Abiword">
@@ -138,14 +140,6 @@
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-   <item label="VLC">
-    <action name="Execute">
-	  <command>vlc</command>
-	  <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-   </item>
 	<item label="Ncmpcpp">
     <action name="Execute">
       <command>urxvt -e ncmpcpp</command>
@@ -213,6 +207,9 @@
   </item>
 </menu>
 
+<menu id="apps-misc-menu" label="Miscellaneous">
+</menu>
+
 <menu id="root-menu" label="Openbox 3">
   <separator label="Start" />
     <item label="Terminal">
@@ -225,16 +222,6 @@
         <command>xterm</command>
       </action>
     </item>
-    <item label="Eclipse">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Eclipse</name>
-          <icon></icon>
-        </startupnotify>
-        <command>eclipse</command>
-      </action>
-    </item>
   <separator label="Applications" />
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
@@ -244,6 +231,7 @@
   <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
   <menu id="apps-fileman-menu"/>
+  <menu id="apps-misc-menu"/>
   <separator label="System" />
   <menu id="openbox-menu"/>
   <menu id="system-menu"/>
@@ -252,7 +240,7 @@
     <item label="Log Out">
       <action name="Exit">
         <prompt>yes</prompt>
-		<command>pkill -KILL openbox</command>
+		<command>pkill -KILL python python2 wbar tint2 volumeicon synergys mpd openbox</command>
       </action>
     </item>
     <separator />

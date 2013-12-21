@@ -32,6 +32,22 @@
 ;;== Use "Shift+Space" to "Mark" ==
 (global-unset-key (kbd "C-SPC"))
 (global-set-key (kbd "M-SPC") 'set-mark-command)
+;;
+;;== Bind C-x 5 to toggle-window-split
+(defun toggle-window-split ()
+  "If the frame is split vertically, split it horizontally or vice versa.
+Assumes that the frame is only split into two."
+  (interactive)
+  (unless (= (length (window-list)) 2) (error "Cannot toggle single window into two!"))
+  (let ((split-vertically-p (window-combined-p)))
+    (delete-window) ; closes current window
+    (if split-vertically-p
+        (split-window-horizontally)
+      (split-window-vertically)) ; gives us a split with the other window twice
+    (switch-to-buffer nil))) ; restore the original window in this part of the frame
+
+;; I don't use the default binding of 'C-x 5', so use toggle-frame-split instead
+(global-set-key (kbd "C-x 5") 'toggle-window-split)
 ;; 
 ;;== No backup file ==
 (setq make-backup-files nil)
@@ -162,3 +178,16 @@
 (autoload 'w3m-search "w3m-search" "Search words using emacs-w3m." t)
 (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-view-this-url-new-session-in-background t)
+;;
+;;== ansi-term ==
+(defun visit-term-buffer ()
+  "Create or visit a terminal buffer."
+  (interactive)
+  (if (not (get-buffer "*ansi-term*"))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (ansi-term (getenv "SHELL")))
+    (switch-to-buffer-other-window "*ansi-term*")))
+(global-set-key (kbd "C-c t") 'visit-term-buffer)
+;;

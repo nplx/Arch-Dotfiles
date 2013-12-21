@@ -20,9 +20,8 @@ fortune -a | cowsay -f moose
 # echo -e "\033[1;35m'¯¯|'|¯¯’|'|/ / |'|_|'|__\  '\'¯¯'¯¯|'|¯¯’  |'|\ '|| ||'|  | ||'||'|\ '|| ’'>_ "
 # echo -e "\033[1;34m  '|_|   |_|\_\ '\___/'\__\/__/    '|_|     |_| |_|\_\/_/  \_\/_/|_| |_||_|/_/ "
 # echo -e "\033[0;30m//////////////////////////////////////////////////////////////////////////////"
-
 # Set xterm transparent
-[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .7 >/dev/null
+[ -n "$WINDOWID" ] && transset-df -i $WINDOWID .8 >/dev/null
 # Set xterm 256 color
 export TERM="xterm-256color"
 # Include ibus/fcitx input module
@@ -33,6 +32,8 @@ export GTK_IM_MODULE=ibus
 # gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
+# VirtEnvWrapper
+source /usr/bin/virtualenvwrapper.sh
 # Set alias
 alias sudo='sudo '
 alias ls='ls --color=auto'
@@ -82,7 +83,7 @@ alias wallproxy="python2 ~/Applications/WallProxy/local/startup.py > /dev/null 2
 alias goagent="python2 ~/Applications/GoAgent/local/proxy.py > /dev/null 2>&1 &"
 alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
 alias unread="python ~/Files/Scripts/Py/unreadGmailCount.py > /dev/null &"
-alias btsync="~/Applications/./btsync > /dev/null 2>&1 &"
+# alias btsync="~/Applications/./btsync --config ~/.btsync.conf > /dev/null 2>&1 &"
 alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.list & pacman -Qqm > ~/.yaourt_backup.list'
 alias heroku="~/Applications/heroku-client/bin/./heroku"
 

@@ -48,14 +48,14 @@ launcher_icon_theme = Faenza
 launcher_padding = 2 2 4
 launcher_background_id = 
 lancher_icon_size = 24
-#launcher_item_app = /usr/share/applications/dwb.desktop
-launcher_item_app = /usr/share/applications/icecat.desktop
-launcher_item_app = /usr/share/applications/emacs.desktop
-launcher_item_app = /usr/share/applications/gvim.desktop
-launcher_item_app = /usr/share/applications/wireshark.desktop
-launcher_item_app = /usr/share/applications/Thunar.desktop
-launcher_item_app = /usr/share/applications/claws-mail.desktop
-launcher_item_app = /usr/share/applications/AdobeReader.desktop
+# launcher_item_app = /usr/share/applications/dwb.desktop
+# launcher_item_app = /usr/share/applications/icecat.desktop
+# launcher_item_app = /usr/share/applications/emacs.desktop
+# launcher_item_app = /usr/share/applications/gvim.desktop
+# launcher_item_app = /usr/share/applications/wireshark.desktop
+# launcher_item_app = /usr/share/applications/Thunar.desktop
+# launcher_item_app = /usr/share/applications/claws-mail.desktop
+# launcher_item_app = /usr/share/applications/AdobeReader.desktop
 
 # Taskbar
 taskbar_mode = single_desktop
@@ -82,8 +82,8 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-# task_font = WenQuanYi Bitmap Song 8
-task_font = Hiragino Sans GB W3 8
+task_font = WenQuanYi Bitmap Song 8
+# task_font = Hiragino Sans GB W3 8
 task_font_color = #FFFFFF 100
 task_active_font_color = #FFFFFF 80
 task_urgent_font_color = #FFFFFF 80
@@ -125,14 +125,14 @@ mouse_middle = none
 #mouse_scroll_down = iconify
 
 # Battery
-#battery = 0
-#battery_low_status = 10
-#battery_low_cmd = notify-send "battery low"
-#battery_hide = 98
-#bat1_font = sans 8
-#bat2_font = sans 6
-#battery_font_color = #FFFFFF 74
-#battery_padding = 1 0
-#battery_background_id = 0
+# battery = 0
+# battery_low_status = 10
+# battery_low_cmd = notify-send "battery low"
+# battery_hide = 98
+# bat1_font = sans 8
+# bat2_font = sans 6
+# battery_font_color = #FFFFFF 74
+# battery_padding = 1 0
+# battery_background_id = 0
 
 # End of config

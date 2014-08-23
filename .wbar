@@ -1,100 +1,100 @@
 i: /usr/share/pixmaps/wbar/dock.png
-c: wbar --bpress --above-desk --nofont --pos bottom --offset 20 --isize 24 --idist 5 --nanim 3 --zoomf 1.400000 --jumpf 0.500000
+c: wbar --bpress --above-desk --nofont --pos bottom --offset 20 --isize 28 --idist 5 --nanim 3 --zoomf 1.400000 --jumpf 0.500000
 t: /10
 
-i: /home/nplx/.icons/Faenza/places/96/archlinux-logo.png
+i: /usr/share/icons/Faenza/places/96/archlinux-logo.png
 c: dwb https://archlinux.org
 t: Archlinux.org
 
-i: /home/nplx/.icons/Faience/categories/96/applications-webbrowsers.png
+i: /usr/share/icons/Faience/apps/96/chromium.png
+c: chromium > /dev/null 2>&1 &
+t: Chromium
+
+i: /usr/share/icons/Faience/categories/96/applications-webbrowsers.png
 c: dwb > /dev/null 2>&1 &
 t: dwb
 
-i: /home/nplx/.icons/Faience/apps/96/midori.png
-c: midori > /dev/null 2>&1 &
-t: Midori
+i: /usr/share/icons/Faenza/apps/96/firefox.png
+c: firefox > /dev/null 2>&1 &
+t: Firefox
 
-i: /home/nplx/.icons/Faience/apps/96/terminal.png
+i: /usr/share/icons/Faience/apps/96/terminal.png
 c: urxvt > /dev/null 2>&1 &
 t: urxvt
 
-i: /home/nplx/.icons/Faenza/apps/96/iceweasel.png
-c: /home/nplx/Applications/Icecat-17.0.1/./icecat > /dev/null 2>&1 &
-t: Icecat
-
-i: /home/nplx/.icons/Faenza/apps/96/gvim.png
+i: /usr/share/icons/Faenza/apps/96/gvim.png
 c: gvim > /dev/null 2>&1 &
 t: Vim
 
-i: /home/nplx/.icons/Faenza/apps/96/emacs.png
+i: /usr/share/icons/Faenza/apps/96/emacs.png
 c: emacs > /dev/null 2>&1 &
 t: Emacs
 
-i: /home/nplx/.icons/Faenza/apps/96/deadbeef.png
+i: /usr/share/icons/Faience/apps/96/sublime-text-2.png
+c: /home/nplx/Applications/sublime_text_3/./sublime_text > /dev/null 2>&1 &
+t: Sublime-Text-3
+
+i: /usr/share/icons/Faenza/apps/96/virtualbox.png
+c: virtualbox > /dev/null 2>&1 &
+t: VirtualBox
+
+i: /usr/share/icons/Faenza/apps/96/vlc.png
+c: vlc > /dev/null 2>&1 &
+t: VLC
+
+i: /usr/share/icons/Faenza/apps/96/deadbeef.png
 c: deadbeef > /dev/null 2>&1 &
 t: Deadbeef
 
-i: /home/nplx/.icons/Faience/apps/96/xpad.png
+i: /usr/share/icons/Faience/apps/96/xpad.png
 c: xpad > /dev/null 2>&1 &
 t: XPad
 
-i: /home/nplx/.icons/Faience/apps/96/claws-mail.png
+i: /usr/share/icons/Faience/apps/96/claws-mail.png
 c: claws-mail > /dev/null 2>&1 &
 t: Claws-mail
 
-i: /home/nplx/.icons/Faenza/apps/96/sublime-text-2.png
-c: /home/nplx/Applications/sublime_text_3/./sublime_text > /dev/null 2>&1 &
-t: Sublime Text 3
-
-i: /home/nplx/.icons/Faenza/apps/96/thunar.png
+i: /usr/share/icons/Faenza/apps/96/thunar.png
 c: thunar > /dev/null 2>&1 &
 t: Thunar
 
-i: /home/nplx/.icons/Faenza/apps/96/AdobeReader8.png
-c: /home/nplx/Applications/Adobe/Reader9/bin/./acroread > /dev/null 2>&1 &
-t: Adobe Reader
+i: /usr/share/icons/Faenza/apps/96/evince.png
+c: evince > /dev/null 2>&1 &
+t: Evince
 
-i: /home/nplx/.icons/Faience/apps/96/dropbox.png
+i: /usr/share/icons/Faience/apps/96/dropbox.png
 c: /usr/bin/dropboxd > /dev/null 2>&1 &
 t: Dropbox
 
-i: /home/nplx/.icons/Faenza/apps/96/amule.png
-c: amule > /dev/null 2>&1 &
-t: aMule
-
-i: /home/nplx/.icons/Faience/apps/96/transmission.png
+i: /usr/share/icons/Faience/apps/96/transmission.png
 c: /usr/bin/transmission-gtk > /dev/null 2>&1 &
 t: Transmission
 
-i: /home/nplx/.icons/Faience/apps/96/libreoffice-main.png
+i: /usr/share/icons/Faience/apps/96/libreoffice-main.png
 c: /usr/bin/libreoffice > /dev/null 2>&1 &
 t: Libreoffice-writer
 
-i: /home/nplx/.icons/Faenza/apps/96/abiword.png
-c: /usr/bin/abiword > /dev/null 2>&1 &
-t: Abiword
-
-i: /home/nplx/.icons/Faience/apps/96/calc.png
+i: /usr/share/icons/Faience/apps/96/calc.png
 c: /usr/bin/galculator > /dev/null 2>&1 &
 t: Galculator
 
-i: /home/nplx/.icons/Faience/apps/96/xterm.png
+i: /usr/share/icons/Faience/apps/96/xterm.png
 c: /usr/bin/xterm > /dev/null 2>&1 &
 t: xterm
 
-i: /home/nplx/.icons/Faenza/apps/96/spideroak.png
+i: /usr/share/icons/Faenza/apps/96/spideroak.png
 c: /usr/bin/SpiderOak > /dev/null 2>&1 &
 t: SpiderOak
 
-i: /home/nplx/.icons/Faenza/apps/96/mirage.png
+i: /usr/share/icons/Faenza/apps/96/mirage.png
 c: /usr/bin/mirage > /dev/null 2>&1 &
 t: Mirage
 
-i: /home/nplx/.icons/Faenza/apps/96/filezilla.png
+i: /usr/share/icons/Faenza/apps/96/filezilla.png
 c: /usr/bin/filezilla > /dev/null 2>&1 &
 t: Filezilla
 
-i: /home/nplx/.icons/Faience/mimetypes/96/application-7zip.png
+i: /usr/share/icons/Faience/mimetypes/96/application-7zip.png
 c: /usr/bin/7zFM > /dev/null 2>&1 &
 t: 7-zip
 

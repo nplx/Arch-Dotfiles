@@ -5,6 +5,7 @@
 ├── .compton.conf
 ├── .conkyrc
 ├── .emacs
+├── .gitignore
 ├── .gvimrc
 ├── .mpd.conf
 ├── .mplayer
@@ -15,14 +16,14 @@
 ├── .vimrc
 ├── .wbar
 ├── .xinitrc
-├── README
 ├── TTF
 │   ├── ConkyWeather.ttf
 │   ├── conky_symbols.ttf
 │   └── weather.ttf
 ├── autostart
 ├── menu.xml
+├── mpd.conf
 ├── rc.xml
 └── tint2rc
 
-3 directories, 22 files
+3 directories, 27 files

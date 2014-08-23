@@ -71,17 +71,17 @@
 </menu>
 
 <menu id="apps-term-menu" label="Terminals">
-  <item label="urxvt (Alt+F1)">
+  <item label="urxvt (Win+F1)">
     <action name="Execute">
       <command>urxvt</command>
     </action>
   </item>
-  <item label="Xterm (Alt+Fn))">
+  <item label="Xterm">
     <action name="Execute">
       <command>xterm</command>
     </action>
   </item>
-  <item label="Terminator (Alt+F2)">
+  <item label="Terminator (Win+F2)">
     <action name="Execute">
 		<command>terminator --geometry=960x660+30+25</command>
     </action>
@@ -89,15 +89,23 @@
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
-  <item label="Icecat">
+  <item label="Chromium (Win+Menu)">
     <action name="Execute">
-		<command>~/Applications/Icecat-17.0.1/./icecat</command>
+        <command>chromium</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
     </action>
   </item>
-  <item label="dwb (TP)">
+  <item label="Firefox">
+    <action name="Execute">
+        <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="dwb (Win+变换)">
     <action name="Execute">
       <command>dwb</command>
       <startupnotify>
@@ -116,25 +124,19 @@
 
 </menu>
 
-<menu id="apps-office-menu" label="Office">
-  <item label="Libreoffice">
+<menu id="apps-office-menu" label="Dev">
+  <item label="Eclipse">
     <action name="Execute">
-      <command>libreoffice</command>
+      <command>eclipse</command>
     </action>
   </item>
-  <item label="Calculator">
+  <separator />
+  <item label="Android Studio">
     <action name="Execute">
-      <command>galculator</command>
-    </action>
-  </item>
-  <item label="PDF Reader">
-    <action name="Execute">
-		<command>~/Applications/Adobe/Reader9/bin/./acroread</command>
-    </action>
-  </item>
-  <item label="Abiword">
-    <action name="Execute">
-      <command>abiword</command>
+        <command>~/Applications/android-studio/bin/./studio.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
     </action>
   </item>
 </menu>
@@ -208,6 +210,20 @@
 </menu>
 
 <menu id="apps-misc-menu" label="Miscellaneous">
+  <item label="Evince">
+    <action name="Execute">
+      <command>evince</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Calculator">
+    <action name="Execute">
+      <command>galculator</command>
+    </action>
+  </item>
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
@@ -219,7 +235,7 @@
           <name>Terminal</name>
           <icon></icon>
         </startupnotify>
-        <command>xterm</command>
+        <command>terminator --geometry=960x660+30+25</command>
       </action>
     </item>
   <separator label="Applications" />
@@ -240,7 +256,8 @@
     <item label="Log Out">
       <action name="Exit">
         <prompt>yes</prompt>
-		<command>pkill -KILL python python2 wbar tint2 volumeicon synergys mpd openbox</command>
+		<!-- <command>pkill &#45;KILL python python2 wbar tint2 volumeicon synergys mpd openbox</command> -->
+		<command>openbox --exit</command>
       </action>
     </item>
     <separator />

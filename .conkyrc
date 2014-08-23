@@ -1,6 +1,5 @@
 ###################################
 ##    My <.conkyrc> 2012
-##    Based on URIEL1998's code
 ###################################
 
 #avoid flickr
@@ -58,11 +57,11 @@ override_utf8_locale yes
 
 #to prevent window from moving
 use_spacer right
-minimum_size 1024
+minimum_size 1280
 
 #listen to MPD
 mpd_host 127.0.0.1
 mpd_port 6600
 
 TEXT
-${offset 5}${voffset 1}${color0}[${color}${voffset 0}${color2}${exec uname -r | sed 's/.\{5\}$//'}${color}${voffset 0}${color0}][${color}${voffset 0}${color2}CPU${color}:${voffset 0}${color2}${cpubar 5,25} ${voffset 0}${cpu cpu0}%${execi 5 sensors | grep 'temp1' | awk 'NR==1' | cut -c15-17}°C${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 100}${color0}[${color}${voffset 0}${color2}${voffset -7}${font Entypo:pixelsize=24}H${font}${color}${voffset -3}${offset 4}${color green}${mpd_track} - ${mpd_title} - ${mpd_artist} ${voffset 0}${mpd_bar 5,50}${color}${voffset 0}${offset 2}${color0}]${color}${else}${alignc}${offset 120}${color0}[${color}${color2}${time %a %d %b}${color}${color0}]${color}${endif}${alignr}${offset -3}${color0}[${color}${voffset -5}${color1}${font Heydings Icons:pixelsize=14}E${font}${color}${voffset -1}:${color}${color2}${execi 5 cat /tmp/.new-mail-count | awk '/[0-9a-z]/'}${color}${voffset 0}${color0}][${color}${voffset -1}${color1}${font ConkyWeather:bold:pixelsize=14}${voffset -1}${execi 120 python3 ~/Files/Scripts/Py/conkyWeatherOutput.py | grep '^.'}${font}${color}${offset 3}${voffset -3}${color2}${execi 120 python ~/Files/Scripts/Py/yw.py | awk 'NR==1'}${color}${color1}°C${color}${color0}${voffset 0}][${color}${voffset -3}${color1}${font Heydings Icons:pixelsize=12}u${font}${color}${voffset -1}${offset -3}:${color2}${upspeedf eth0}${color}${offset -14}${color1}kb/s${color}${voffset -2}${color1}${font Heydings Icons:pixelsize=12}d${font}${color}${voffset -2}${offset -3}:${color2}${downspeedf eth0}${color}${offset -14}${color1}kb/s${color}${voffset 0}${color0}]${color}
+${offset 5}${color0}[${color}${color2}${exec uname -r | sed 's/.\{5\}$//'}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%+${acpitemp}${offset -5}°C${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 150}${color0}[${color}${offset 4}${color cyan}${mpd_track} - ${mpd_title} - ${mpd_artist} ${voffset 0}${mpd_bar 5,50}${color}${offset 2}${color0}]${color}${else}${alignc}${offset 150}${color0}[${color}${color2}${time %a %d %b}${color}${color0}]${color}${endif}${alignr}${offset -15}${color0}[${color}${color1}mail${color}:${color}${color2}${execi 5 cat /tmp/.new-mail-number | grep -o '[0-9a-z\/]\+'}${color}${color0}][${color}${voffset -1}${color1}${font ConkyWeather:bold:pixelsize=14}${voffset -1}${execi 120 python3 ~/Files/Scripts/Py/conkyWeatherOutput.py | grep '^.'}${font}${color}${offset 3}${voffset -3}${color2}${execi 120 python ~/Files/Scripts/Py/yweatherScript.py | awk 'NR==1'}${color}${color1}°C${color}${color0}][${color}${if_existing /sys/class/power_supply/BAT1/status Discharging}${color2}Battery:${execi 30 echo -n $(acpi -b | cut -c30-31 | sed 's/^0//' | awk '{if ($1 != 0) {print $1"h"} else {}}'); echo -n $(acpi -b | cut -c33-34 | awk '{if ($1 != 00) {print $1"m"} else {}}')}${color}${else}${if_existing /sys/class/power_supply/BAT1/status Charging}${color2}Charging:${battery_percent BAT1}%${color}${else}${if_match ${execi 5 cat /sys/class/power_supply/BAT1/capacity}>=99}AC:${color green}Charged${color}${endif}${endif}${endif}${color0}][${color}${if_existing /proc/net/route enp0s25}${color1}up${font}${color}${offset 0}:${color2}${upspeedf enp0s25}KB/s${color} ${color1}down${font}${color}${offset 0}:${color2}${downspeedf enp0s25}KB/s${color}${color0}]${color}${else}${if_existing /proc/net/route wlp10s0}${color1}up${color}${offset 0}:${color2}${upspeedf wlp10s0}KB/s${color} ${color1}down${color}${offset 0}:${color2}${downspeedf wlp10s0}KB/s${color}${color0}]${color}${else}${if_empty ${execi 2 cat /proc/net/route | awk 'NR==2'}}${color2}off-line${color}${color0}]${color}${endif}${endif}${endif}

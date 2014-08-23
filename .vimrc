@@ -15,9 +15,9 @@ filetype plugin indent on
 """""""" gui
 syntax on
 set guioptions-=T
-" colorscheme vj
-" colorscheme sift
-colorscheme inkpot
+" colorscheme inkpot
+colorscheme molokai
+hi Normal ctermbg=None
 
 """""""" more basics
 set number
@@ -34,7 +34,7 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.,eol:◃
 highlight NonText guifg=#444444
 set ch=2
 set laststatus=2
-let g:Powerline_symbols ='fancy'
+" let g:Powerline_symbols ='fancy'
 set t_Co=256
 au BufRead /tmp/mutt-* set tw=70
 set wildmenu
@@ -42,7 +42,7 @@ set wildmode=list:longest,full
 set mouse=a
 
 """""""" Airline
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 " function! AirlineInit()
 " 	let g:airline_section_a = airline#section#create(['mode',' ','branch'])
 " 	let g:airline_section_b = airline#section#create_left(['ffenc','hunks','%f'])

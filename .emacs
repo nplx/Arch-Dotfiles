@@ -6,23 +6,37 @@
 ;	  '((width . 72) (height . 36)))
 ;(setq inhibit-splash-screen t)
 ;;
+;;== el-get ==
+;;
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)
+;;
 ;;== User ==
 ;(setq user-full-name "nplx")
 ;(setq user-mail-address "nplx@nplx.tk")
 ;;
 ;;== Add load path ==
-(add-to-list 'load-path "~/.emacs.d/")
+;;(add-to-list 'load-path "~/.emacs.d/")
 ;;
 ;;== EasyPG: GPG support (decrypt in buffer; save encrypted) ==
-(require 'epa-file)
-(epa-file-enable)
-(setq epa-armor t) ; use ASCII armored encryption
-(custom-set-variables '(epa-file-name-regexp "\\.\\(asc\\|gpg\\|gpg~\\|asc~\\)\\'"))
-(custom-set-variables '(ibus-python-shell-command-name "python2"))
+;;(require 'epa-file)
+;;(epa-file-enable)
+;;(setq epa-armor t) ; use ASCII armored encryption
+;;(custom-set-variables '(epa-file-name-regexp "\\.\\(asc\\|gpg\\|gpg~\\|asc~\\)\\'"))
+;;(custom-set-variables '(ibus-python-shell-command-name "python2"))
 ;;
 ;;== tramp ==
-(require 'tramp)
-(setq tramp-default-method "scp")
+;;(require 'tramp)
+;;(setq tramp-default-method "scp")
 ;;
 ;;== Matching pairs of parentheses ==
 (setq show-paren-delay 0)
@@ -65,17 +79,13 @@ Assumes that the frame is only split into two."
  '(tool-bar-mode nil))
 ;;
 ;;== Auto-complete ==
-(add-to-list 'load-path "/usr/share/emacs/site-lisp")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/usr/share/emacs/site-lisp//ac-dict")
-(ac-config-default)
+(require 'auto-complete)
 ;;
 ;;== Set theme ==
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
 ;;(color-theme-lawrence)
-;;(color-theme-euphoria)
 (color-theme-deep-blue)
 ;;
 ;;== Dispaly time ==
@@ -107,7 +117,7 @@ Assumes that the frame is only split into two."
 ;;
 ;;== Font ==
 ;(set-default-font "Envy Code R for Powerline-11")
-(set-default-font "Ubuntu Mono for Powerline-11")
+(set-default-font "Ubuntu Mono derivative Powerline-11")
 ;(set-default-font "WenQuanYi Zen Hei Mono-12")
 ;(set-default-font "YaHei Consolas Hybrid-10")
 ;(set-frame-font "DejaVu Sans Mono-10")
@@ -122,28 +132,13 @@ Assumes that the frame is only split into two."
 ;(setq scroll-step 1)
 ;;
 ;;== Enable wheel scrolling == 
-;(mouse-wheel-mode t)
+(mouse-wheel-mode t)
 ;;
 ;;== Hide tool bar ==
 (setq tool-bar-mode)
 ;;
 ;;== Display pictures ==
 (auto-image-file-mode)
-;;
-;;
-;;== el-get ==
-;;
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (let (el-get-master-branch)
-      (goto-char (point-max))
-      (eval-print-last-sexp))))
-
-(el-get 'sync)
 ;;
 ;;== ibus-el ==
 (require 'ibus)
@@ -191,3 +186,6 @@ Assumes that the frame is only split into two."
     (switch-to-buffer-other-window "*ansi-term*")))
 (global-set-key (kbd "C-c t") 'visit-term-buffer)
 ;;
+;;== Powerline ==
+(require 'powerline)
+(powerline-default-theme)

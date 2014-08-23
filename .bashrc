@@ -3,8 +3,8 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-[[ $TERM != screen* ]] && exec tmux -2
+#[[ $- != *i* ]] && return
+#[[ $TERM != screen* ]] && exec tmux -2
 
 # Set prompt
 #PS1='\[\033[0m\]┌──[\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\H\[\033[0m\]]──[\[\033[1;32m\]\w\[\033[0m\]]\n\[\033[0m\]└──► \[\033[0m\]'
@@ -32,7 +32,10 @@ export GTK_IM_MODULE=ibus
 # gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
+# Coloring man page
+export PAGER="most"
 # VirtEnvWrapper
+export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 # Set alias
 alias sudo='sudo '
@@ -58,6 +61,7 @@ alias pacrm='pacman -Rns'
 alias pacRm='pacman -Rcns'
 alias fehview='feh --zoom fill -. -x'
 alias fehlist='feh -l -r'
+alias scrot="scrot 'Screenshot-%Y-%m-%d-%_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'"
 alias rt="rtorrent"
 alias nload="nload -u K -i 4000 -o 4000"
 alias mutt="mutt -F ~/.mutt/.gmail.muttrc"
@@ -68,7 +72,7 @@ alias mounwork="sudo mount -t cifs -o username=nplx //192.168.1.100/Workspace /m
 alias mounapp="sudo mount -t cifs -o username=nplx //192.168.1.100/AndroidStudioProjects /mnt/AndroidStudioProjects"
 alias mounusb="sudo mount -t vfat /dev/sdb1 /mnt/usbdisk"
 alias sublime="~/Applications/sublime_text_3/./sublime_text"
-# alias sshcjb="ssh nplx@216.194.70.6 -p 443"
+alias sshnplx="ssh nplx@107.155.97.190 -p 22"
 # alias ssharbor="ssh m-net.arbornet.org"
 # alias scpcjb="scp://nplx@216.194.70.6/"
 # alias sshtunnel="ssh -ND 9394 -v nplx@216.194.70.6 -p 443"
@@ -78,11 +82,10 @@ alias youtubestream="~/Files/Scripts/Bash/./youtubestream.sh"
 alias dict="ydcv -f --color auto"
 alias sdict="sdcv --data-dir"
 # alias yt3="youtube-viewer -3"
-alias mplayer="mplayer -af volume=20:1 -osdlevel 3 -framedrop "
+# alias mplayer="mplayer -af volume=20:1 -osdlevel 3 -framedrop "
 alias wallproxy="python2 ~/Applications/WallProxy/local/startup.py > /dev/null 2>&1 &"
 alias goagent="python2 ~/Applications/GoAgent/local/proxy.py > /dev/null 2>&1 &"
-alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /dev/null &"
-alias unread="python ~/Files/Scripts/Py/unreadGmailCount.py > /dev/null &"
+alias newmail="python ~/Files/Scripts/Py/newmailnotifier.py > /tmp/.new-mail-script.log 2>&1 &"
 # alias btsync="~/Applications/./btsync --config ~/.btsync.conf > /dev/null 2>&1 &"
 alias backup_pkg_list='pacman -Qqe | grep -vx "$(pacman -Qqm)" > ~/.pkg_backup.list & pacman -Qqm > ~/.yaourt_backup.list'
 alias heroku="~/Applications/heroku-client/bin/./heroku"
@@ -162,4 +165,4 @@ function _prompt_command(){
 }
 PROMPT_COMMAND=_prompt_command
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Dyne-ob</name>
+    <name>Dyne</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -154,19 +154,19 @@
      cases. -->
   <margins>
     <top>0</top>
-    <bottom>60</bottom>
+    <bottom>70</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Bottom</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <noStrut>no</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>
@@ -331,11 +331,11 @@
       </action>
     </keybind>
     <!-- Keybindings for window resizing -->
-    <keybind key="A-m">
+    <keybind key="W-m">
       <action name="ToggleMaximize">
       </action>
     </keybind>
-    <keybind key="A-i">
+    <keybind key="W-i">
       <action name="Iconify">
       </action>
     </keybind>
@@ -361,7 +361,7 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="A-F1">
+    <keybind key="W-F1">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -370,21 +370,30 @@
         <command>urxvt</command>
       </action>
     </keybind>
-    <keybind key="A-F13">
+    <keybind key="W-Muhenkan">
       <action name="Execute">
         <enable>true</enable>
         <name>xterm</name>
         <command>xterm</command>
       </action>
     </keybind>
-    <keybind key="A-F2">
+    <keybind key="W-F2">
       <action name="Execute">
         <enable>true</enable>
         <name>Terminator</name>
-        <command>terminator --geometry=960x660+30+25</command>
+        <command>terminator --geometry=1100x660+80+25</command>
       </action>
     </keybind>
-    <keybind key="F35">
+    <keybind key="W-Menu">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>chromium</name>
+        </startupnotify>
+        <command>chromium</command>
+      </action>
+    </keybind>
+    <keybind key="W-Henkan_Mode">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>

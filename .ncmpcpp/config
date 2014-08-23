@@ -27,42 +27,20 @@ mpd_connection_timeout = "5"
 ## (it has to be put into mpd.conf)
 ##
 #audio_output {
-       type            "fifo"
-       name            "My FIFO"
+       # type            "fifo"
+       # name            "My FIFO"
 #       path            "/tmp/mpd.fifo"
 ##        format          "44100:16:1"
 #}
 ##
 #
-#visualizer_fifo_path = ""
 #
-##
-## Note: Below parameter is needed for ncmpcpp
-## to determine which output provides data for
-## visualizer and thus allow syncing between
-## visualization and sound as currently there
-## are some problems with it.
-##
-#
-#visualizer_output_name = ""
-#
-##
-## Note: Below parameter defines how often ncmpcpp
-## has to "synchronize" visualizer and audio outputs.
-## 30 seconds is optimal value, but if you experience
-## synchronization problems, set it to lower value.
-## Keep in mind that sane values start with >=10.
-##
-#
-#visualizer_sync_interval = "30"
-#
-##
-## Note: To enable spectrum frequency visualization
-## you need to compile ncmpcpp with fftw3 support.
-##
-#
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
 #visualizer_type = "wave" (spectrum/wave)
-#
+visualizer_type = "spectrum" (spectrum/wave)
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding

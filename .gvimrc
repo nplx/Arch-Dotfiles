@@ -1,25 +1,35 @@
 " au BufWritePost .gvimrc so ~/.gvimrc " automatically reload vimrc when it's saved
-winpos 38 34
-set lines=45
+" winpos 42 78
+set lines=42
 " set columns=132 " YaHei
-set columns=116 " Source Code
+set columns=98 " Source Code
 " set columns=
-set mouse=a
-" set guifont=ProggySquareTT\ 12
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
+" set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
 " set guifont=YaHei\ Consolas\ Hybrid\ 10
 " set guifont=DejaVu\ Sans\ Mono\ 10
 " set guifont=Envy\ Code\ R\ for\ Powerline\ 10
 " set guifont=Monaco\ 10
-" set guifont=monofur\ 12
-" set guifont=Latin\ Modern\ Mono\ 12
-" set guifont=M+\ 1m\ 11
-" set guifont=Typed\ 10
-" set guifont=PT\ Mono\ 10
-" colorscheme sift
-" colorscheme cthulhian
-colorscheme underwater
-" colorscheme codeblocks_dark
+set guifont=Input\ Mono\ Regular\ 10
+" colorscheme molokai
 " colorscheme sea
 " colorscheme solarized
-" colorscheme slate
+" colorscheme Tomorrow-Night
+if strftime("%H") < 19 && strftime("%H") >= 7
+    " colorscheme lucius
+    colorscheme OceanicNext
+    " colorscheme PaperColor
+    " colorscheme base16-ateliercave
+    set background=light
+else
+    colorscheme onedark
+endif
+" colorscheme mod8
+" colorscheme PaperColor
+" set background=light
+" colorscheme hybrid-light
+" AirlineTheme base16
+AirlineTheme lucius
+" AirlineTheme zenburn
+" AirlineTheme solarized
+" AirlineTheme jellybeans
+" hi CursorLineNr guifg=#ccc

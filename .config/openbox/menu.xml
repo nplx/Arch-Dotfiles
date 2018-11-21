@@ -3,15 +3,7 @@
 <menu id="apps-accessories-menu" label="Accessories">
   <item label="Dropbox">
     <action name="Execute">
-      <command>dropboxd</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="aMule">
-    <action name="Execute">
-      <command>amule</command>
+      <command>dropbox</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -25,9 +17,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="SpiderOak">
+  <item label="Seafile">
     <action name="Execute">
-      <command>SpiderOak</command>
+      <command>seafile-applet</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -36,7 +28,7 @@
 </menu>
 
 <menu id="apps-editors-menu" label="Editors">
-  <item label="Emacs">
+    <item label="Emacs">
     <action name="Execute">
       <command>emacs</command>
       <startupnotify>
@@ -68,6 +60,14 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Leafpad">
+    <action name="Execute">
+      <command>leafpad</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-term-menu" label="Terminals">
@@ -76,22 +76,31 @@
       <command>urxvt</command>
     </action>
   </item>
-  <item label="Xterm">
+  <item label="xterm">
     <action name="Execute">
       <command>xterm</command>
     </action>
   </item>
-  <item label="Terminator (Win+F2)">
-    <action name="Execute">
-		<command>terminator --geometry=960x660+30+25</command>
-    </action>
-  </item>
+  <!-- <item label="gnome&#45;terminal (Win+F2)"> -->
+  <!--   <action name="Execute"> -->
+  <!--       <!&#45;&#45; <command>terminator &#38;#45;T "Terminal" &#38;#45;&#38;#45;geometry=960x660+30+25</command> &#45;&#45;> -->
+  <!--       <command>sh ~/Files/Scripts/Sh/runTerminator.sh</command> -->
+  <!--   </action> -->
+  <!-- </item> -->
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
   <item label="Chromium (Win+Menu)">
     <action name="Execute">
-        <command>chromium</command>
+        <command>chromium --window-size=1192,745 --enable-accelerated-compositing</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Chromium Fresh">
+    <action name="Execute">
+      <command>chromium --user-data-dir=/home/nplx/.cache/chromium-fresh --incognito --window-size=1192,745 --enable-accelerated-compositing</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -105,15 +114,23 @@
       </startupnotify>
     </action>
   </item>
-  <item label="dwb (Win+变换)">
-    <action name="Execute">
-      <command>dwb</command>
-      <startupnotify>
-        <enabled>yes</enabled>
-      </startupnotify>
-    </action>
-    </item>
-    <item label="Claws Mail">
+  <!-- <item label="dwb (Win+变换)"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>dwb</command> -->
+  <!--     <startupnotify> -->
+  <!--       <enabled>yes</enabled> -->
+  <!--     </startupnotify> -->
+  <!--   </action> -->
+  <!-- </item> -->
+  <!-- <item label="qutebrowser"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>qutebrowser</command> -->
+  <!--     <startupnotify> -->
+  <!--       <enabled>yes</enabled> -->
+  <!--     </startupnotify> -->
+  <!--   </action> -->
+  <!-- </item> -->
+  <item label="Claws Mail">
     <action name="Execute">
       <command>claws-mail</command>
       <startupnotify>
@@ -121,19 +138,80 @@
       </startupnotify>
     </action>
   </item>
-
 </menu>
 
-<menu id="apps-office-menu" label="Dev">
-  <item label="Eclipse">
+<menu id="apps-office-menu" label="Office">
+  <item label="WPS Word">
     <action name="Execute">
-      <command>eclipse</command>
+      <command>/opt/WPS-Office-shortcut/wps.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="ET Excel">
+    <action name="Execute">
+      <command>/opt/WPS-Office-shortcut/et.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="WPP PPT">
+    <action name="Execute">
+      <command>/opt/WPS-Office-shortcut/wpp.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
     </action>
   </item>
   <separator />
+  <item label="GNU Cash">
+    <action name="Execute">
+      <command>gnucash</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+
+<menu id="apps-develop-menu" label="Dev">
+  <item label="Code::Blocks">
+    <action name="Execute">
+      <command>codeblocks</command>
+    </action>
+  </item>
+  <separator />
+  <item label="IntelliJ">
+    <action name="Execute">
+        <command>idea.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="PyCharm">
+    <action name="Execute">
+        <command>pycharm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Android Studio">
     <action name="Execute">
-        <command>~/Applications/android-studio/bin/./studio.sh</command>
+        <command>android-studio</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="VSCode">
+    <action name="Execute">
+        <command>code</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -142,7 +220,17 @@
 </menu>
 
 <menu id="apps-multimedia-menu" label="Multimedia">
-	<item label="Ncmpcpp">
+  <item label="Netease Cloud Music">
+    <action name="Execute">
+      <command>netease-cloud-music --no-sandbox</command>
+    </action>
+  </item>
+  <item label="Cmus">
+    <action name="Execute">
+      <command>urxvt -e cmus</command>
+    </action>
+  </item>
+  <item label="Ncmpcpp">
     <action name="Execute">
       <command>urxvt -e ncmpcpp</command>
     </action>
@@ -150,9 +238,18 @@
 </menu>
 
 <menu id="apps-fileman-menu" label="File Managers">
-	<item label="Filezilla">
+  <item label="Filezilla">
     <action name="Execute">
       <command>filezilla</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  <item label="Nautilus">
+    <action name="Execute">
+      <command>nautilus</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -187,6 +284,22 @@
       </startupnotify>
     </action>
   </item>
+  <item label="GIMP">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Inkscape">
+    <action name="Execute">
+      <command>inkscape</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="openbox-menu" label="Configurations">
@@ -210,9 +323,19 @@
 </menu>
 
 <menu id="apps-misc-menu" label="Miscellaneous">
-  <item label="Evince">
+  <item label="System Minotor">
     <action name="Execute">
-      <command>evince</command>
+      <command>gnome-system-monitor</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="PDF Viewer">
+    <action name="Execute">
+      <!-- <command>evince</command> -->
+      <command>epdfiview</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -232,10 +355,10 @@
       <action name="Execute">
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Terminal</name>
-          <icon></icon>
+          <name>urxvt</name>
         </startupnotify>
-        <command>terminator --geometry=960x660+30+25</command>
+        <!-- <command>terminator &#45;&#45;geometry=960x660+30+25</command> -->
+        <command>urxvt</command>
       </action>
     </item>
   <separator label="Applications" />
@@ -244,6 +367,7 @@
   <menu id="apps-graphics-menu"/>
   <menu id="apps-net-menu"/>
   <menu id="apps-office-menu"/>
+  <menu id="apps-develop-menu"/>
   <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
   <menu id="apps-fileman-menu"/>
@@ -253,27 +377,28 @@
   <menu id="system-menu"/>
   <separator />
   <menu id="system-menu" label="System">
-    <item label="Log Out">
-      <action name="Exit">
-        <prompt>yes</prompt>
-		<!-- <command>pkill &#45;KILL python python2 wbar tint2 volumeicon synergys mpd openbox</command> -->
-		<command>openbox --exit</command>
-      </action>
+    <item label="Lock Screen (Fn+F8)">
+        <action name="Execute">
+            <command>/bin/sh -c 'sleep 1 &amp;&amp; xset dpms force off'</command>
+        </action>
+        <action name="Execute">
+            <command>i3lock</command>
+        </action>
     </item>
     <separator />
-    <item label="Reboot">
+    <item label="Exit">
       <action name="Execute">
-        <prompt>Are you sure you want to reboot?</prompt>
-        <command>systemctl reboot</command>
+        <!-- <prompt>Are you sure you want to reboot?</prompt> -->
+        <command>oblogout</command>
       </action>
     </item>
-    <separator />
-    <item label="Poweroff">
-      <action name="Execute">
-        <prompt>Are you sure you want to shut down Archlinux?</prompt>
-		<command>systemctl poweroff</command>
-      </action>
-    </item>
+    <!-- <separator /> -->
+    <!-- <item label="Poweroff"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <prompt>Are you sure you want to shut down Archlinux?</prompt> -->
+    <!--     <command>systemctl poweroff</command> -->
+    <!--   </action> -->
+    <!-- </item> -->
   </menu>
 
 </menu>

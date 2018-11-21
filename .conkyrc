@@ -1,67 +1,73 @@
-###################################
-##    My <.conkyrc> 2012
-###################################
+conky.config = {
 
-#avoid flickr
-double_buffer yes
-no_buffers yes
+--avoid flickr
+	double_buffer = true,
+	no_buffers = true,
 
-#own window
-own_window yes
-own_window_transparent no
-#own_window_type normal
-#own_window_type panel
-own_window_type desktop
-#own_window_type override
-#own_window_type dock
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager
-own_window_argb_visual yes
+--own window
+	own_window = true,
+	own_window_argb_visual = true,
+	own_window_argb_value = 155,
+	own_window_transparent = false,
+	--own_window_type normal
+	--own_window_type panel
+	own_window_type = 'desktop',
+	--own_window_type override
+	--own_window_type dock
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager',
 
-net_avg_samples 2
-cpu_avg_samples 2
-#net_avg_samples 3
-#cpu_avg_samples 3
+	net_avg_samples = 2,
+	cpu_avg_samples = 2,
+	--net_avg_samples 3
+	--cpu_avg_samples 3
 
-#borders
-draw_borders no
-border_width 0
+--borders
+	draw_borders = false,
+	border_width = 0,
 
-#shades
-draw_shades no
-draw_outline no
+--shades
+	draw_shades = false,
+	draw_outline = false,
 
-#position
-gap_x 0
-gap_y 5
-alignment bl
+--position
+	gap_x = 0,
+	gap_y = 4,
+	alignment = 'bottom_right',
 
-#behaviour
-update_interval 1
-#update_interval_on_battery
-total_run_times 0
+--behaviour
+	update_interval = 1,
+	--update_interval_on_battery = 2,
+	total_run_times = 0,
 
-#color
-default_color ffffff
-#default_shade_color 000000
-#own_window_color 000000
-color0 4774a7
-color1 f2f2f2
-color2 a3c2e1
+--color
+	default_color = 'ffffff',
+	--default_shade_color 000000
+	--own_window_color 000000
+	color0 = '4774a7',
+	color1 = 'f2f2f2',
+	color2 = 'a3c2e1',
 
-#font
-use_xft yes
-xftfont ProggyTinyTT
+--font
+	use_xft = true,
+	font = 'ProggyTinyTT',
 
-#force UTF8
-override_utf8_locale yes
+--force UTF8
+	override_utf8_locale = true,
 
-#to prevent window from moving
-use_spacer right
-minimum_size 1280
+--add spaces to the right to keep component stay still
+	pad_percents = 1,
+	--use_spacer none
+	use_spacer = 'right',
 
-#listen to MPD
-mpd_host 127.0.0.1
-mpd_port 6600
+	minimum_width = 1600, minimum_height = 10,
+	maximum_width = 1600,
 
-TEXT
-${offset 5}${color0}[${color}${color2}${exec uname -r | sed 's/.\{5\}$//'}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%+${acpitemp}${offset -5}°C${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing}${alignc}${offset 150}${color0}[${color}${offset 4}${color cyan}${mpd_track} - ${mpd_title} - ${mpd_artist} ${voffset 0}${mpd_bar 5,50}${color}${offset 2}${color0}]${color}${else}${alignc}${offset 150}${color0}[${color}${color2}${time %a %d %b}${color}${color0}]${color}${endif}${alignr}${offset -15}${color0}[${color}${color1}mail${color}:${color}${color2}${execi 5 cat /tmp/.new-mail-number | grep -o '[0-9a-z\/]\+'}${color}${color0}][${color}${voffset -1}${color1}${font ConkyWeather:bold:pixelsize=14}${voffset -1}${execi 120 python3 ~/Files/Scripts/Py/conkyWeatherOutput.py | grep '^.'}${font}${color}${offset 3}${voffset -3}${color2}${execi 120 python ~/Files/Scripts/Py/yweatherScript.py | awk 'NR==1'}${color}${color1}°C${color}${color0}][${color}${if_existing /sys/class/power_supply/BAT1/status Discharging}${color2}Battery:${execi 30 echo -n $(acpi -b | cut -c30-31 | sed 's/^0//' | awk '{if ($1 != 0) {print $1"h"} else {}}'); echo -n $(acpi -b | cut -c33-34 | awk '{if ($1 != 00) {print $1"m"} else {}}')}${color}${else}${if_existing /sys/class/power_supply/BAT1/status Charging}${color2}Charging:${battery_percent BAT1}%${color}${else}${if_match ${execi 5 cat /sys/class/power_supply/BAT1/capacity}>=99}AC:${color green}Charged${color}${endif}${endif}${endif}${color0}][${color}${if_existing /proc/net/route enp0s25}${color1}up${font}${color}${offset 0}:${color2}${upspeedf enp0s25}KB/s${color} ${color1}down${font}${color}${offset 0}:${color2}${downspeedf enp0s25}KB/s${color}${color0}]${color}${else}${if_existing /proc/net/route wlp10s0}${color1}up${color}${offset 0}:${color2}${upspeedf wlp10s0}KB/s${color} ${color1}down${color}${offset 0}:${color2}${downspeedf wlp10s0}KB/s${color}${color0}]${color}${else}${if_empty ${execi 2 cat /proc/net/route | awk 'NR==2'}}${color2}off-line${color}${color0}]${color}${endif}${endif}${endif}
+
+--listen to MPD
+	mpd_host = '127.0.0.1',
+	mpd_port = 6600,
+
+};
+
+conky.text = [[
+${offset 10}${voffset 2}${color0}[${color}${color2}${exec uname -r | sed 's/.\{5\}$//'}${color}${color0}][${color}${color2}CPU${color}:${color2}${cpubar 5,25} ${cpu cpu0}%+${hwmon temp 1}${offset -4}°C${color} ${color2}RAM${color}:${color2}${membar 5,25} ${memperc}%${color}${color0}]${color}${if_mpd_playing} | ${color0}[${color}${offset 4}${color cyan}${mpd_track} - ${mpd_title} - ${mpd_artist} ${voffset 0}${mpd_bar 5,50}${color}${offset 2}${color0}]${color}${else}${alignc -220}${color0}[${color}${color2}${execi 1 LC_TIME=en_US.utf8 date "+%a %d %b"}${color}${color0}]${color}${endif}${alignr -120}${color0}[${color}${color1}mail${color}:${color}${color2}${execi 5 cat /tmp/.new-mail-number | grep -o '[0-9a-z\/]\+'}${color}${color0}][${color}${voffset 0}${color2}${font WenQuanYi WenQuanYi Bitmap Song:regular:pixelsize=9}${execi 5 cat /tmp/.weather_condition_output | awk NR==2}${font}${color}${offset 6}${voffset -1}${color2}${execi 5 cat /tmp/.weather_condition_output | awk 'NR==1'}${color}${color1}°C${color}${color0}][${color}${if_existing /sys/class/power_supply/BAT1/status Discharging}${color2}Battery:${battery_percent BAT1}% ${execi 30 echo -n $(acpi -b | cut -c30-31 | sed 's/^0//' | awk '{if ($1 != 0) {print $1"h"} else {}}'); echo -n $(acpi -b | cut -c33-34 | awk '{if ($1 != 00) {print $1"m"} else {}}')}${color}${else}${if_existing /sys/class/power_supply/BAT1/status Charging}${color2}Charging:${battery_percent BAT1}%${color}${else}${if_match ${execi 5 cat /sys/class/power_supply/BAT1/capacity}>=99}AC:${color green}Charged${color}${else}${if_existing /sys/class/power_supply/BAT1/status Unknown}${color2}Unknown: ${color}${endif}${endif}${endif}${endif} ${color2}${execi 5 cat /sys/class/power_supply/BAT1/power_now | awk '{printf "%.0fW", $1*10^-6}'}${color}${color0}][${color}${if_existing /proc/net/route enp0s25}${color1}up${color}${offset 0}:${color2}${upspeedf enp0s25}KB/s${color} ${color1}down${color}${offset 0}:${color2}${downspeedf enp0s25}KB/s${color}${color0}]${color}${else}${if_existing /proc/net/route wlp2s0}${color1}up${color}${offset 0}:${color2}${upspeedf wlp2s0}KB/s${color} ${color1}down${color}${offset 0}:${color2}${downspeedf wlp2s0}KB/s${color}${color0}]${color}${else}${if_empty ${execi 2 cat /proc/net/route | awk 'NR==2'}}${color2}off-line${color}${color0}]       ${color}${endif}${endif}${endif}]];

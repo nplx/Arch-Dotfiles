@@ -35,64 +35,96 @@ Xft*rgba:                        rgb
 *color15:        #E3E3E3
 
 ! URxvt ------------------------------------
-URxvt*saveLines:   1500
-URxvt*termName: rxvt-unicode
+URxvt*saveLines:   5000
+! URxvt*termName: rxvt-unicode
+! URxvt*termName: screen-256color
 
-!URxvt*font:xft:Envy Code R:size=10:regular,xft:WenQuanYi Bitmap Song:size=9:regular
-!URxvt*boldFont:xft:Envy Code R:size=10:bold,xft:WenQuanYi Bitmap Song:size=9:bold
-!URxvt*italicFont:xft:Envy Code R:size=10:italic,xft:WenQuanYi Bitmap Song:size=9:italic
 !URxvt.font:              xft:DejaVu LGC Sans Mono:size=10:book
 !URxvt.boldFont:          xft:DejaVu LGC Sans Mono:size=10:bold
 !URxvt.italicFont:        xft:DejaVu LGC Sans Mono:size=10:oblique
-
-URxvt.font:       [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8,\
-                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular
-URxvt.boldFont:   [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8,\
-                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold
-URxvt.italicFont: [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8,\
-                  [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic
-
-URxvt.keysym.M-Up: command: \
-        \033]710;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular:size=8\007 \
-        \033]711;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold:size=8\007 \
-        \033]712;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic:size=8\007
-URxvt.keysym.M-Down: command: \
-        \033]710;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:regular\007 \
-        \033]711;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:bold\007 \
-        \033]712;[codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Micro Hei Mono:italic\007
-
 !
-! URxvt.font:       [codeset=ASCII]xft:Envy Code R for Powerline:size=8,\
+! URxvt.font:              xft:Source Code Pro for Powerline:size=9
+! URxvt.boldFont:          xft:Source Code Pro for Powerline:size=9
+! URxvt.italicFont:        xft:Source Code Pro for Powerline:size=9
+!
+!
+URxvt.font:       [codeset=ASCII]xft:Terminess Powerline:size=9,\
+                  [codeset=ISO10646]xft:WenQuanYi WenQuanYi Bitmap Song:regular
+URxvt.boldFont:   [codeset=ASCII]xft:Terminess Powerline:bold:size=9,\
+                  [codeset=ISO10646]xft:WenQuanYi WenQuanYi Bitmap Song:bold
+URxvt.italicFont: [codeset=ASCII]xft:Terminess Powerline:italic:size=9,\
+                  [codeset=ISO10646]xft:WenQuanYi WenQuanYi Bitmap Song:italic
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:Perfect DOS VGA 437:size=12,\
 !                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
-! URxvt.boldFont:   [codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8,\
+! URxvt.boldFont:   [codeset=ASCII]xft:Perfect DOS VGA 437:bold:size=12,\
 !                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
-! URxvt.italicFont: [codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8,\
+! URxvt.italicFont: [codeset=ASCII]xft:Perfect DOS VGA 437:italic:size=12,\
 !                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
-! 
-! URxvt.keysym.M-Up: command: \
-!         \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular:size=8\007 \
-!         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold:size=8\007 \
-!         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic:size=8\007
-! URxvt.keysym.M-Down: command: \
-!         \033]710;[codeset=ASCII]xft:Envy Code R for Powerline:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular\007 \
-!         \033]711;[codeset=ASCII]xft:Envy Code R for Powerline:bold:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold\007 \
-!         \033]712;[codeset=ASCII]xft:Envy Code R for Powerline:italic:size=8, [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic\007
-
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:GohuFont:regular:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:GohuFont:bold:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:GohuFont:italic:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:ProFont:regular:size=11,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:ProFont:bold:size=11,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:ProFont:italic:size=11,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:Incosolata-dz for Powerline:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:Inconsolata-dz for Powerline:bold:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:Incosolata-dz for Powerline:italic:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:bold:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:DejaVu Sans Mono for Powerline:italic:size=9,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+!
+!
+! URxvt.font:       [codeset=ASCII]xft:Envy Code R for Powerline:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:regular
+! URxvt.boldFont:   [codeset=ASCII]xft:Envy Code R for Powerline:bold:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:bold
+! URxvt.italicFont: [codeset=ASCII]xft:Envy Code R for Powerline:italic:size=10,\
+!                   [codeset=ISO10646]xft:WenQuanYi Bitmap Song:italic
+!
+!
 !!urxvt*geometry:                  124x53+5+30
-urxvt*geometry:                  80x30
-urxvt*inputMethod:               ibus
-urxvt*depth:                     32
+urxvt*geometry:                  90x30
+! urxvt*inputMethod:               ibus
+urxvt*inputMethod:               fcitx
+! urxvt*depth:                     32
+! urxvt*background:                rgba:0000/0000/0200/c800
+! urxvt*background:                #182235
+urxvt*background:                #0e1726
 urxvt*borderLess:                false
 urxvt*scrollBar:                 false
 urxvt*matcher.button:            1
 urxvt*cursorBlink:               true
 !urxvt*cursorColor:               #258aef
-urxvt*cursorColor:				 Green
+urxvt*cursorColor:               Green
 urxvt*allow_bold:                true
-urxvt*internalBorder:            10
-!!urxvt*inheritPixmap:             true
+urxvt*internalBorder:            2
+! urxvt*inheritPixmap:             true
 !!urxvt*tintColor:                 #
-urxvt*shading:                   100
+! urxvt*shading:                   100
+! urxvt*transparent:               true
+! urxvt*shading:                   30
 !!urxvt*fading:                    0
 !!urxvt*fadeColor:                 #222222
 urxvt*urgentOnBell:              true
@@ -107,45 +139,82 @@ URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 !!------------xterm----------------
 !look and feel
 xterm*termName: xterm-256color
-xterm*geometry: 80x26
+xterm*geometry: 72x32
 xterm*scrollBar: false
 xterm*rightScrollBar: true
 xterm*loginshell: true
 xterm*cursorBlink: true
+! xterm*reverseVideo: on
 xterm*background:  black
-xterm*foreground:  grey
-!xterm*foreground:  green
+! xterm*foreground:  grey
+! xterm*foreground:  green
 xterm*cursorColor:  green
 xterm*borderLess: true
 xterm*activeIcon: true
 xterm*colorUL: yellow
-xterm*colorBD: white
+! xterm*colorBD: white
 
 !input & fix alt key
-xterm*inputMethod: ibus
+! xterm*inputMethod: ibus
+xterm*inputMethod: fcitx
 !xterm*eightBitInput: true
 !xterm*altSendsEscape: true
 
 !font and locale
-!xterm*locale: true
-!xterm*utf8:     true
-!xterm*utf8Title: true
+xterm*locale: true
+xterm*utf8:     true
+xterm*utf8Title: true
 xterm*fontMenu*fontdefault*Label: Default
-xterm*faceName: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=11
-xterm*boldFont: DejaVu Sans Mono for Powerline:style=Bold:pixelsize=11
-xterm*faceNameDoublesize: YaHei Consolas Hybrid:antialias=True:pixelsize=11
-!xterm*xftAntialias: true
+! xterm*faceName: DejaVu Sans Mono for Powerline:antialias=True:pixelsize=11
+! xterm*boldFont: DejaVu Sans Mono for Powerline:style=Bold:pixelsize=11
+! xterm*faceNameDoublesize: YaHei Consolas Hybrid:antialias=True:pixelsize=11
+! xterm*faceName: Terminess Powerline:pixelsize=9
+! xterm*boldFont: Terminess Powerline:pixelsize=9
+xterm*faceName: DejaVu Sans Mono for Powerline:pixelsize=11
+xterm*boldFont: DejaVu Sans Mono for Powerline:pixelsize=11
+xterm*faceNameDoublesize: WenQuanYi Bitmap Song:pixelsize=12
+xterm*xftAntialias: true
 !xterm*cjkWidth:true
 !xterm*preeditType:Root
 
 !------------ Emacs settings ------------
-Emacs*geometry: 120x35
-!Emacs.cursorColor: yellow
+! Emacs*useXIM: false
+! Emacs*geometry: 120x35
+Emacs.cursorColor: yellow
 Emacs*borderWidth: 0
 Emacs*internalBorder: 0
 !Emacs.background: black
 !Emacs.foreground: white
-!Emacs.pointerColor: yellow
+Emacs.pointerColor: yellow
 Emacs*borderColor: black
 !Emacs*mode-line*attributeBackground: black
 !Emacs*mode-line*attributeForeground: white
+
+! xscreensaver ---------------------------------------------------------------
+!font settings
+xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #111111
+xscreensaver.Dialog.background:         #ffffff
+xscreensaver.Dialog.topShadowColor:     #111111
+xscreensaver.Dialog.bottomShadowColor:  #111111
+xscreensaver.Dialog.Button.foreground:  #ffffff
+xscreensaver.Dialog.Button.background:  #666666
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #ffffff
+xscreensaver.Dialog.text.background:    #666666
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.shadowThickness:    2
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #ff0000
+xscreensaver.passwd.thermometer.background:  #000000
+xscreensaver.passwd.thermometer.width:       8
+!datestamp format--see the strftime(3) manual page for details
+xscreensaver.dateFormat:    %I:%M%P %b %d

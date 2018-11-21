@@ -1,0 +1,153 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+
+# if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+# elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+# fi
+
+# If you want to use XFCE config tools...
+#
+# xfce4-power-manager &
+# gnome-power-manager &
+
+
+# Light Locker
+light-locker &
+
+#Network
+nm-applet &
+# wicd-client --tray &
+
+# Wallpaper
+# eval `cat ~/.fehbg` &
+sh ~/.fehbg &
+# nitrogen &
+
+# Turn off audio beep
+xset b off &
+#MPD
+mpd &
+
+# Include ibus/fcitx input module
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS="@im=ibus"
+# export QT_IM_MODULE=ibus
+# ibus-daemon -drRx
+# export XIM=fcitx
+# export XIM_PROGRAM=fcitx
+# export GTK_IM_MODULE=fcitx &
+# export QT_IM_MODULE=fcitx &
+# export XMODIFIERS="@im=fcitx" &
+sh /home/nplx/Files/Scripts/Sh/runFcitx.sh &
+# fcitx &
+
+#Conky
+conky &
+
+#Set compmgr
+#(sleep 2s && xcompmgr -cCfF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.5 -m.82) & #With shadow
+#(sleep 2s && xcompmgr -fF -t-5 -l-5 -I-0.4 -O-0.4 -D3 -r3 -o.5 -m.82) & #No shadow
+
+#Set compton
+#compton -CGb & #Quick start
+compton --config ~/.compton.conf -b & #With config file
+
+#XScreensaver
+# xscreensaver -nosplash &
+
+# Battery
+# cbatticon &
+# batterymon -t '16x16' &
+# batterymon -t 'tinybat' &
+
+#Run volume tray icon
+volumeicon &
+# xfce4-volumed &
+
+#Manage clipboard
+clipit &
+# parcellite &
+
+#Run proxy
+# /home/nplx/Applications/XX-Net/./start &
+# python2 /home/nplx/Files/Scripts/Py/runXXNet.py &
+# python2 ~/Applications/XX-Mini/proxy.py &
+# sh ~/Files/Scripts/Sh/ss_heroku.sh &
+# sslocal -c /etc/shadowsocks/hostmybytes_config.json &
+sslocal -c /etc/shadowsocks/hostmybytes_kcptun_config.json &
+sslocal -c /etc/shadowsocks/quadhost_config.json &
+sslocal -c /etc/shadowsocks/virmach_config.json &
+/home/nplx/Applications/kcptun/./client_linux_amd64 -r "107.150.3.250:4000" -l ":4440" -mode fast2 -crypt "salsa20" -key "UNoPass_" &
+
+#Run Seafile
+sh /home/nplx/Files/Scripts/Sh/seafile-applet.sh &
+
+# Start Synergy
+synergys &
+
+# Start Syncthing
+syncthing &
+
+# Monitor Thermal
+# python ~/Files/Scripts/Py/temperaturelog.py &
+
+# Run autoBacklight.py script
+python ~/Files/Scripts/Py/autoBacklight.py &
+
+#Run mpd (deprecated)
+# mpd ~/.mpdconf &
+
+# Tiling windows
+# pytyle2 &
+
+# Set volume
+# python ~/Files/Scripts/Py/restoreVolume.py &
+
+# Run transset
+# (sleep 1s && transset-df -n Conky .6) &
+# transset-df -n Conky .6 &
+# Set volume
+amixer sset -c 0 'Master' 60 &
+amixer sset -c 0 'Headphone' 100 &
+amixer sset -c 0 'PCM' 240 &
+
+# Run weather script
+# python ~/Files/Scripts/Py/yc.py &
+# python ~/Files/Scripts/Py/weather.com.cn.py &
+# python ~/Files/Scripts/Py/weathercn.com.py &
+# (sleep 10s && python ~/Files/Scripts/Py/mojiweather.py) &
+(sleep 5s && python ~/Files/Scripts/Py/heweather.py) &
+
+# Run my mail notifier
+(sleep 5s && python ~/Files/Scripts/Py/newmailnotifier.py) &
+
+# Paramano
+# sh ~/Files/Scripts/Sh/runParamano.sh &
+paramano &
+
+# Monitoring power consumption
+# python ~/Files/Scripts/Py/bat_stat.py &
+
+#Run Panel
+tint2 &
+
+# wbar
+# (sleep 3s && LC_CTYPE=zh_CN.UTF-8 wbar) &
+# wbar &
+
+# xfce4-panel &
+(sleep 1s && LC_ALL=zh_CN.UTF-8 xfce4-panel) &
+# plank &
+
+# Dropbox
+(sleep 20s && dropbox) &
+
+# albert
+env QT_AUTO_SCREEN_SCALE_FACTOR=0 albert

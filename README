@@ -1,29 +1,30 @@
 .
-├── .Xdefaults
+├── .bash_aliases
 ├── .bash_profile
 ├── .bashrc
 ├── .compton.conf
+├── .config
+│   └── openbox
+│       ├── autostart
+│       ├── menu.xml
+│       └── rc.xml
 ├── .conkyrc
 ├── .emacs
 ├── .gitignore
 ├── .gvimrc
-├── .mpd.conf
 ├── .mplayer
 │   └── config
 ├── .ncmpcpp
 │   └── config
+├── README
 ├── .tmux.conf
+├── TTF
+│   ├── conky_symbols.ttf
+│   ├── ConkyWeather.ttf
+│   └── weather.ttf
 ├── .vimrc
 ├── .wbar
-├── .xinitrc
-├── TTF
-│   ├── ConkyWeather.ttf
-│   ├── conky_symbols.ttf
-│   └── weather.ttf
-├── autostart
-├── menu.xml
-├── mpd.conf
-├── rc.xml
-└── tint2rc
+├── .Xdefaults
+└── .xinitrc
 
-3 directories, 27 files
+5 directories, 22 files
